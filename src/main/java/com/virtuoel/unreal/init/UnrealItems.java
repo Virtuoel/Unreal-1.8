@@ -97,6 +97,7 @@ public class UnrealItems
 	public static Item rodGold;
 	public static Item lensTarydium;
 	public static Item coreInvulnerability;
+	public static Item slimeballBlack;
 	
 	//fluid containers
 	public static Item bucketMercury;
@@ -524,6 +525,12 @@ public class UnrealItems
 				new ItemUnreal()
 				.setUnlocalizedName(Names.Items.CORE_INVULNERABILITY)
 				.setMaxStackSize(1)
+				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
+		
+		slimeballBlack = 
+				new ItemUnreal()
+				.setUnlocalizedName(Names.Items.SLIMEBALL_BLACK)
+				.setMaxStackSize(64)
 				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
 		
 		//fluid containers
@@ -1056,6 +1063,7 @@ public class UnrealItems
 		GameRegistry.registerItem(rodGold, Names.Items.ROD_GOLD);
 		GameRegistry.registerItem(lensTarydium, Names.Items.LENS_TARYDIUM);
 		GameRegistry.registerItem(coreInvulnerability, Names.Items.CORE_INVULNERABILITY);
+		GameRegistry.registerItem(slimeballBlack, Names.Items.SLIMEBALL_BLACK);
 		
 		//fluid containers
 		GameRegistry.registerItem(bucketMercury, Names.Items.BUCKET_MERCURY);
@@ -1211,6 +1219,7 @@ public class UnrealItems
 		registerRender(rodGold);
 		registerRender(lensTarydium);
 		registerRender(coreInvulnerability);
+		registerRender(slimeballBlack);
 		
 		//fluid containers
 		registerRender(bucketMercury);

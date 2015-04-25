@@ -478,16 +478,28 @@ public class UnrealRecipes
 			"virtuoel.unreal.debug","virtuoel.unreal.debug",UnrealBlocks.blockEnderCrystal,Blocks.dragon_egg,UnrealBlocks.blockEnderCrystal,"blockBedrockium","virtuoel.unreal.debug",UnrealBlocks.blockEnderCrystal,UnrealBlocks.blockEnderCrystal,
 			}));
 		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustCinnabarTiny,1), new Object[]{
+			UnrealItems.dustGoldTiny,"oreGold",UnrealItems.dustRedstoneTiny,"virtuoel.unreal.debug",UnrealItems.dustGoldTiny,"oreGold",UnrealItems.dustGoldTiny,UnrealItems.dustRedstoneTiny,UnrealItems.dustGoldTiny,
+			}));
+		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.bucketTarydiumSludge,1), new Object[]{
 			"blockTarydium","gemTarydium","blockAsbestos","dustAsbestos","listAllMercury","listAllMercury","virtuoel.unreal.debug","virtuoel.unreal.debug",Items.bucket,
 			}));
 		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.bucketHealth,1), new Object[]{
-			"dustDiamond",new ItemStack(Items.golden_apple,1,0),"virtuoel.unreal.debug","listAllMilk","dustDiamond",Items.bucket,"dustDiamond","virtuoel.unreal.debug","dustDiamond",
-			}));//TODO golden apple type in settings
+			Settings.Crafting.cheapHealthBuckets?UnrealItems.dustDiamondTiny:"dustDiamond",new ItemStack(Items.golden_apple,1,Settings.Crafting.cheapHealthBuckets?0:1),"virtuoel.unreal.debug","listAllMilk",Settings.Crafting.cheapHealthBuckets?UnrealItems.dustDiamondTiny:"dustDiamond",Items.bucket,Settings.Crafting.cheapHealthBuckets?UnrealItems.dustDiamondTiny:"dustDiamond","virtuoel.unreal.debug",Settings.Crafting.cheapHealthBuckets?UnrealItems.dustDiamondTiny:"dustDiamond"
+			}));
 		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.bucketNanoblack,1), new Object[]{
-			"blockInk",UnrealItems.translocatorDisc,"blockLithium","listAllMercury","virtuoel.unreal.debug",Items.bucket,"blockInk","blockLithium","virtuoel.unreal.debug",
+			"blockSlimeBlack",UnrealItems.translocatorDisc,"blockLithium","listAllMercury","virtuoel.unreal.debug",Items.bucket,"blockSlimeBlack","blockLithium","virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.slimeballBlack,1), new Object[]{
+			"blockSlime","blockInk","blockInk","blockAsbestos","blockSlime","blockInk","blockSlime","blockInk","blockSlime",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.slime_ball,16), new Object[]{
+			"dyeLime","virtuoel.unreal.debug","dyeGreen","slimeballBlack","dyeLime","dyeGreen","dyeLime","dyeGreen","dyeLime",
 			}));
 		
 		//unrefining
@@ -505,10 +517,6 @@ public class UnrealRecipes
 		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealBlocks.blockTarydium,1), new Object[]{
 			UnrealBlocks.blockUUTC,"virtuoel.unreal.debug"
-			}));
-		
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustCinnabarTiny,1), new Object[]{
-			UnrealItems.dustGoldTiny,"oreGold",UnrealItems.dustRedstoneTiny,"virtuoel.unreal.debug",UnrealItems.dustGoldTiny,"oreGold",UnrealItems.dustGoldTiny,UnrealItems.dustRedstoneTiny,UnrealItems.dustGoldTiny,
 			}));
 		//TODO debug recipe end ---------------------------------------------------------------------------------------------------------------------------------
 		
@@ -755,6 +763,14 @@ public class UnrealRecipes
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockLithium,1), new Object[]{
 			"TTT","TTT","TTT",'T',"ingotLithium",
+			}));
+		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.slimeballBlack,9), new Object[]{
+			"T",'T',"blockSlimeBlack",
+			}));
+		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockSlimeBlack,1), new Object[]{
+			"TTT","TTT","TTT",'T',"slimeballBlack",
 			}));
 		//end blocks ---------------------------------------------------------------------------------------------------------------------------------
 		if(Settings.Crafting.nineTinyDustPerTitaniumDust)
@@ -1928,7 +1944,6 @@ public class UnrealRecipes
 		OreDictionary.registerOre("gemTarydium", UnrealItems.gemTarydium);
 		OreDictionary.registerOre("blockTarydium", UnrealBlocks.blockTarydium);
 		OreDictionary.registerOre("nuggetIron", UnrealItems.nuggetIron);
-		OreDictionary.registerOre("blockLeather", UnrealBlocks.blockLeather);
 		OreDictionary.registerOre("oreTarydium", UnrealBlocks.oreTarydiumEnd);
 		OreDictionary.registerOre("oreTarydium", UnrealBlocks.oreTarydiumNether);
 		OreDictionary.registerOre("oreTarydium", UnrealBlocks.oreTarydiumObsidian);
@@ -1966,6 +1981,9 @@ public class UnrealRecipes
 		OreDictionary.registerOre("blockGunpowder", UnrealBlocks.blockGunpowder);
 		OreDictionary.registerOre("blockEnder", UnrealBlocks.blockEnder);
 		OreDictionary.registerOre("blockEnderPearl", UnrealBlocks.blockEnder);
+		OreDictionary.registerOre("blockLeather", UnrealBlocks.blockLeather);
+		OreDictionary.registerOre("blockSlimeBlack", UnrealBlocks.blockSlimeBlack);
+		OreDictionary.registerOre("slimeballBlack", UnrealItems.slimeballBlack);
 		OreDictionary.registerOre("dustIron", UnrealItems.dustIron);
 		OreDictionary.registerOre("dustGold", UnrealItems.dustGold);
 		OreDictionary.registerOre("dustTarydiumAlloyUnrefined", UnrealItems.dustTarydiumAlloyUnrefined);

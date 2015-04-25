@@ -11,6 +11,7 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
 import com.virtuoel.unreal.creativetab.CreativeTabUnreal;
@@ -105,9 +106,16 @@ public class ItemBlockPlacer extends ItemBlock
 						((EntityPlayer)par3Entity).inventory.armorItemInSlot(2).getItem()==
 								UnrealItems.armorToxinSuit)
 				{
-					if(itemRand.nextInt(100)==0)
+					if(((EntityPlayer)par3Entity).inventory.armorItemInSlot(2).getItemDamage()<240)
 					{
-						((EntityPlayer)par3Entity).inventory.armorItemInSlot(2).damageItem(1, (EntityPlayer)par3Entity);
+						if(itemRand.nextInt(100)==0)
+						{
+							((EntityPlayer)par3Entity).inventory.armorItemInSlot(2).damageItem(1, (EntityPlayer)par3Entity);
+						}
+					}
+					else
+					{
+						((EntityPlayer)par3Entity).inventory.armorInventory[2]=null;
 					}
 				}
 				else

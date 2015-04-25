@@ -56,6 +56,8 @@ public class ConfigurationHandler
 		Settings.Crafting.nineTinyDustPerLithiumDust = configuration.getBoolean("nineTinyDustPerLithiumDust", Reference.ConfigCategory.CRAFTING, true, "True for 9 Tiny Pile of Lithium Dust per Lithium Dust, false for 4");
 		Settings.Crafting.nineTinyDustPerGunpowderDust = configuration.getBoolean("nineTinyDustPerGunpowder", Reference.ConfigCategory.CRAFTING, true, "True for 9 Tiny Pile of Gunpowder per Gunpowder, false for 4");
 		
+		Settings.Crafting.cheapHealthBuckets = configuration.getBoolean("cheapHealthBuckets", Reference.ConfigCategory.CRAFTING, true, "True for Health Buckets to use Golden Apples and Tiny Diamond Dust (9x cheaper), false for Notch Apples and Diamond Dust.");
+		
 		Settings.World.worldGeneratorWeight = configuration.getInt("worldGeneratorWeight", Configuration.CATEGORY_GENERAL, 1, 0, 1000, "Weight of world generator");
 		
 		Settings.Weapons.stingerTerrainDamage = configuration.getBoolean("stingerTerrainDamage", Reference.ConfigCategory.WEAPONS, true, "If Stinger destroys terrain");

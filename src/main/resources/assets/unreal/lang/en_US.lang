@@ -87,6 +87,7 @@ item.unreal:rodTitanium.name=Titanium Rod
 item.unreal:rodGold.name=Gold Rod
 item.unreal:lensTarydium.name=Tarydium Field Focus Lens
 item.unreal:coreInvulnerability.name=Modulated Nanoblack Shielding Core
+item.unreal:slimeballBlack.name=Black Slimeball
 # (Fluid Containers)
 item.unreal:bucketMercury.name=Mercury Bucket
 item.unreal:bucketTarydiumSludge.name=Tarydium Sludge Bucket
@@ -219,7 +220,7 @@ tile.unreal:blockCharcoal.name=Block of Charcoal
 tile.unreal:blockGunpowder.name=Block of Gunpowder
 tile.unreal:blockEnder.name=Ender Pearl Block
 tile.unreal:blockLeather.name=Block of Leather
-tile.unreal:blockSlime.name=Slime Block
+tile.unreal:blockSlimeBlack.name=Black Slime Block
 tile.unreal:blockBlaze.name=Blaze Rod Block
 tile.unreal:blockGhastTear.name=Crystalline Tear Block
 tile.unreal:blockNetherWart.name=Compacted Nether Wart Block

@@ -16,6 +16,7 @@ import com.virtuoel.unreal.block.BlockForceField;
 import com.virtuoel.unreal.block.BlockIronLadder;
 import com.virtuoel.unreal.block.BlockNetherWartStorage;
 import com.virtuoel.unreal.block.BlockOreUnreal;
+import com.virtuoel.unreal.block.BlockSlimeUnreal;
 import com.virtuoel.unreal.block.BlockUnreal;
 import com.virtuoel.unreal.creativetab.CreativeTabUnreal;
 import com.virtuoel.unreal.item.ItemBlockPlacer;
@@ -84,6 +85,7 @@ public class UnrealBlocks
 	public static Block blockDiamondCorrugated;
 	public static Block blockIronSmooth;
 	public static Block blockMachineFrameBasic;
+	public static Block blockSlimeBlack;
 	
 	public static void init()
 	{
@@ -484,6 +486,13 @@ public class UnrealBlocks
 				.setStepSound(Block.soundTypeMetal)
 				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
 		
+		blockSlimeBlack = 
+				new BlockSlimeUnreal(Material.clay)
+				.setUnlocalizedName(Names.Blocks.BLOCK_SLIME_BLACK)
+				.setHardness(0.5F).setResistance(2.5F)
+				.setStepSound(Block.SLIME_SOUND)
+				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
+		
 	}
 	
 	public static void register()
@@ -506,6 +515,7 @@ public class UnrealBlocks
 			}
 		});
 		Blocks.enchanting_table.setHarvestLevel("pickaxe", 3);
+		Blocks.slime_block.setHardness(0.5F);
 		
 		//blocks
 		blockTitanium.setHarvestLevel("pickaxe", 2);
@@ -638,6 +648,9 @@ public class UnrealBlocks
 		blockMachineFrameBasic.setHarvestLevel("pickaxe", 1);
 		GameRegistry.registerBlock(blockMachineFrameBasic, Names.Blocks.BLOCK_MACHINE_FRAME_BASIC);
 		
+		blockSlimeBlack.setHarvestLevel("shovel", 0);
+		GameRegistry.registerBlock(blockSlimeBlack, Names.Blocks.BLOCK_SLIME_BLACK);
+		
 	}
 	
 	public static void registerRenders()
@@ -697,6 +710,7 @@ public class UnrealBlocks
 		registerRender(blockDiamondCorrugated);
 		registerRender(blockIronSmooth);
 		registerRender(blockMachineFrameBasic);
+		registerRender(blockSlimeBlack);
 	}
 	
 	public static void registerRender(Block block)

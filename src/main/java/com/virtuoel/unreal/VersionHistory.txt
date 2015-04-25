@@ -55,13 +55,17 @@ Syntax List
 [LAN]
 
 //TODO:
--Armor Material Texture Name
 -Material names to reference file
 -updateItemStackNBT(NBTTagCompound tag) for weapons
 -Shield Belt model
--config setting for golden apple for health bucket
 
 Changelog:
+
+0.2.0.13
+---
+[Addition] Black Slimeball and Slime Block
+[Addition] Config option for cheaper Health Buckets
+[Bugfix] Toxin Suit not being destroyed fixed
 
 0.2.0.12
 ---

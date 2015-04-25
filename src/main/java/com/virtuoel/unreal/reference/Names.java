@@ -46,7 +46,7 @@ public final class Names
 		public static final String BLOCK_GUNPOWDER = "blockGunpowder";
 		public static final String BLOCK_ENDER = "blockEnder";
 		public static final String BLOCK_LEATHER = "blockLeather";
-		public static final String BLOCK_SLIME = "blockSlime";
+		public static final String BLOCK_SLIME_BLACK = "blockSlimeBlack";
 		public static final String BLOCK_BLAZE = "blockBlaze";
 		public static final String BLOCK_GHAST_TEAR = "blockGhastTear";
 		public static final String BLOCK_NETHER_WART = "blockNetherWart";
@@ -138,6 +138,7 @@ public final class Names
 		public static final String ROD_GOLD = "rodGold";
 		public static final String LENS_TARYDIUM = "lensTarydium";
 		public static final String CORE_INVULNERABILITY = "coreInvulnerability";
+		public static final String SLIMEBALL_BLACK = "slimeballBlack";
 		
 		//fluid containers
 		public static final String BUCKET_MERCURY = "bucketMercury";

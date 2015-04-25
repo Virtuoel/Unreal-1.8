@@ -37,6 +37,8 @@ public class Settings
 		public static boolean nineTinyDustPerObsidianDust;
 		public static boolean nineTinyDustPerLithiumDust;
 		public static boolean nineTinyDustPerGunpowderDust;
+
+		public static boolean cheapHealthBuckets;
 	}
 	
 	public static class Weapons
