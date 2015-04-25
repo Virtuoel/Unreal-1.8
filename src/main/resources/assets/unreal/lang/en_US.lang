@@ -1,0 +1,259 @@
+# Vanilla
+tile.dirt.name=Dirt
+tile.sand.name=Sand
+tile.quartzBlock.name=Block of Quartz
+item.milk.name=Milk Bucket
+item.redstone.name=Redstone Dust
+
+# Other
+nei.load=Load
+
+# Death Messages
+death.attack.unreal.translocator=%1$s was telefragged
+death.attack.unreal.translocator.player=%1$s was telefragged by %2$s
+death.attack.unreal.dispersionPistol=%1$s was killed by a Dispersion Pistol. What a loser!
+death.attack.unreal.dispersionPistol.player=%1$s was killed by %2$s's Dispersion Pistol. What a loser!
+death.attack.unreal.chainsaw=%1$s was ripped to shreads by a Chainsaw
+death.attack.unreal.chainsaw.player=%1$s was ripped to shreads by %2$s's Chainsaw
+death.attack.unreal.stinger=%1$s was shot by a Stinger
+death.attack.unreal.stinger.player=%1$s was shot by %2$s's Stinger
+death.attack.unreal.flakCannon=%1$s was mutilated by a Flak Cannon
+death.attack.unreal.flakCannon.player=%1$s was mutilated by %2$s's Flak Cannon
+death.attack.unreal.flak=%1$s was mutilated by some loose Flak
+death.attack.unreal.flak.player=%1$s was mutilated by %2$s's Flak Cannon
+death.attack.unreal.eightballLauncher=%1$s was blown up by an Eightball Rocket
+death.attack.unreal.eightballLauncher.player=%1$s was blown up by %2$s's Eightball Launcher
+death.attack.unreal.redeemer=%1$s was nuked
+death.attack.unreal.redeemer.player=%1$s was nuked by %2$s
+
+# Entities
+entity.unreal.TranslocatorDisc.name=Translocator Disc
+
+# Items
+# (Ore materials, metals, gems, alloys)
+item.unreal:ingotTitanium.name=Titanium Ingot
+item.unreal:nuggetTitanium.name=Titanium Nugget
+item.unreal:dustTitanium.name=Titanium Dust
+item.unreal:ingotRutile.name=Impure Titanium Ingot
+item.unreal:nuggetRutile.name=Impure Titanium Nugget
+item.unreal:dustRutile.name=Impure Titanium Dust
+item.unreal:ingotMagnesium.name=Magnesium Ingot
+item.unreal:nuggetMagnesium.name=Magnesium Nugget
+item.unreal:dustMagnesium.name=Magnesium Dust
+item.unreal:gemTarydium.name=Tarydium Crystal
+item.unreal:shardTarydium.name=Tarydium Shard
+item.unreal:crystalCinnabar.name=Cinnabar
+item.unreal:dustCinnabar.name=Cinnabar Dust
+item.unreal:dustAsbestos.name=Asbestos Dust
+item.unreal:nuggetIron.name=Iron Nugget
+item.unreal:ingotBedrockium.name=Bedrockium Ingot
+item.unreal:nuggetBedrockium.name=Bedrockium Nugget
+item.unreal:ingotTarydiumAlloyUnrefined.name=Unrefined Tarydium Alloy Ingot
+item.unreal:nuggetTarydiumAlloyUnrefined.name=Unrefined Tarydium Alloy Nugget
+item.unreal:dustTarydiumAlloyUnrefined.name=Unrefined Tarydium Alloy Dust
+item.unreal:ingotTarydiumAlloyRefined.name=Refined Tarydium Alloy Ingot
+item.unreal:nuggetTarydiumAlloyRefined.name=Refined Tarydium Alloy Nugget
+item.unreal:dustTarydiumAlloyRefined.name=Refined Tarydium Alloy Dust
+item.unreal:ingotLithium.name=Lithium Ingot
+item.unreal:nuggetLithium.name=Lithium Nugget
+item.unreal:dustLithium.name=Lithium Dust
+# (Components)
+item.unreal:caseIron.name=Iron Casing
+item.unreal:caseTitanium.name=Titanium Casing
+item.unreal:gunBarrelIron.name=Ammo Barrel
+item.unreal:gunBarrelIronLarge.name=Bundled Ammo Barrel
+item.unreal:weaponCasingBasic.name=Basic Weapon Casing
+item.unreal:weaponCasingAdv.name=Advanced Weapon Casing
+item.unreal:tarydPowerBasic.name=Tarydium Energy Crystal
+item.unreal:chainLink.name=Chain Link
+item.unreal:ribbonMagnesium.name=Magnesium Ribbon
+item.unreal:chainsawBlade.name=Chainsaw Blade
+item.unreal:chainsawBladeHardened.name=Hardened Chainsaw Blade
+item.unreal:chainsawMotor.name=Chainsaw Motor
+item.unreal:SCUBATankEmpty.name=SCUBA Tank (Empty)
+item.unreal:SCUBATankOxygen.name=SCUBA Tank (Filled)
+item.unreal:flak.name=Flak
+item.unreal:flakShellCold.name=Cold Flak Shell
+item.unreal:flakShellWarm.name=Heated Flak Shell
+item.unreal:translocatorDisc.name=Translocator Disc
+item.unreal:dispersionUpgrade.name=Brilithium Power Core
+item.unreal:warheadCone.name=Warhead Cone
+item.unreal:warheadBody.name=Warhead Body
+item.unreal:warheadThruster.name=Warhead Thruster
+item.unreal:rodTarydiumAlloyUnrefined.name=Unrefined Tarydium Alloy Rod
+item.unreal:rodTarydiumAlloyRefined.name=Refined Tarydium Alloy Rod
+item.unreal:rodIron.name=Iron Rod
+item.unreal:rodTitanium.name=Titanium Rod
+item.unreal:rodGold.name=Gold Rod
+item.unreal:lensTarydium.name=Tarydium Field Focus Lens
+item.unreal:coreInvulnerability.name=Modulated Nanoblack Shielding Core
+# (Fluid Containers)
+item.unreal:bucketMercury.name=Mercury Bucket
+item.unreal:bucketTarydiumSludge.name=Tarydium Sludge Bucket
+item.unreal:bucketHealth.name=Health Bucket
+item.unreal:bucketNanoblack.name=Nanoblack Bucket
+# (Tools)
+item.unreal:debugTool.name=Unreal.debugTool();
+item.unreal:forceField.name=Force Field
+item.unreal:voiceBox.name=Voice Box
+item.unreal:universalTranslator.name=Universal Translator
+item.unreal:swordTitanium.name=Titanium Sword
+item.unreal:pickaxeTitanium.name=Titanium Pickaxe
+item.unreal:shovelTitanium.name=Titanium Shovel
+item.unreal:axeTitanium.name=Titanium Axe
+item.unreal:hoeTitanium.name=Titanium Hoe
+item.unreal:swordTarydiumAlloyRefined.name=Refined Tarydium Alloy Sword
+item.unreal:pickaxeTarydiumAlloyRefined.name=Refined Tarydium Alloy Pickaxe
+item.unreal:shovelTarydiumAlloyRefined.name=Refined Tarydium Alloy Shovel
+item.unreal:axeTarydiumAlloyRefined.name=Refined Tarydium Alloy Axe
+item.unreal:hoeTarydiumAlloyRefined.name=Refined Tarydium Alloy Hoe
+# (Records)
+item.unreal:recordLongFlight.name=Music Disc
+# (Special Armor)
+item.unreal:armorSCUBAGear.name=SCUBA Gear
+item.unreal:armorToxinSuit.name=Toxin Suit
+item.unreal:armorAsbestosSuit.name=Asbestos Suit
+item.unreal:armorShieldBelt.name=Shield Belt
+item.unreal:armorJumpBoots.name=Jump Boots
+# (Armor)
+item.unreal:armorHelmetTitanium.name=Titanium Helmet
+item.unreal:armorChestplateTitanium.name=Titanium Chestplate
+item.unreal:armorLeggingsTitanium.name=Titanium Leggings
+item.unreal:armorBootsTitanium.name=Titanium Boots
+item.unreal:armorHelmetSlime.name=Slime Helmet
+item.unreal:armorChestplateSlime.name=Slime Chestplate
+item.unreal:armorLeggingsSlime.name=Slime Leggings
+item.unreal:armorBootsSlime.name=Slime Boots
+item.unreal:armorInvulnerability.name=Invulnerability
+# (Ammo)
+item.unreal:ammoEightball.name=Eightball Rocket
+item.unreal:ammoFlakShell.name=Flak Shell
+item.unreal:ammoWarhead.name=Redeemer Warhead
+# (Weapons)
+item.unreal:gunTranslocator.name=Translocator
+item.unreal:gunDispersionPistol.name=Dispersion Pistol
+item.unreal:meleeChainsaw.name=Chainsaw
+item.unreal:gunStinger.name=Stinger
+item.unreal:gunFlakCannon.name=Flak Cannon
+item.unreal:gunEightballLauncher.name=Eightball Launcher
+item.unreal:gunRedeemer.name=Redeemer
+# (Vanilla Item Dusts)
+item.unreal:dustCoal.name=Coal Dust
+item.unreal:dustCharcoal.name=Charcoal Dust
+item.unreal:dustIron.name=Iron Dust
+item.unreal:dustLapis.name=Lapis Lazuli Dust
+item.unreal:dustGold.name=Gold Dust
+item.unreal:dustNetherQuartz.name=Nether Quartz Dust
+item.unreal:dustDiamond.name=Diamond Dust
+item.unreal:dustEmerald.name=Emerald Dust
+item.unreal:dustObsidian.name=Obsidian Dust
+# (Tiny Dusts)
+item.unreal:dustTitaniumTiny.name=Tiny Pile of Titanium Dust
+item.unreal:dustRutileTiny.name=Tiny Pile of Impure Titanium Dust
+item.unreal:dustMagnesiumTiny.name=Tiny Pile of Magnesium Dust
+item.unreal:dustCinnabarTiny.name=Tiny Pile of Cinnabar Dust
+item.unreal:dustAsbestosTiny.name=Tiny Pile of Asbestos Dust
+item.unreal:dustTarydiumAlloyUnrefinedTiny.name=Tiny Pile of Unrefined Tarydium Alloy Dust
+item.unreal:dustTarydiumAlloyRefinedTiny.name=Tiny Pile of Refined Tarydium Alloy Dust
+item.unreal:dustCoalTiny.name=Tiny Pile of Coal Dust
+item.unreal:dustCharcoalTiny.name=Tiny Pile of Charcoal Dust
+item.unreal:dustIronTiny.name=Tiny Pile of Iron Dust
+item.unreal:dustLapisTiny.name=Tiny Pile of Lapis Lazuli Dust
+item.unreal:dustGoldTiny.name=Tiny Pile of Gold Dust
+item.unreal:dustRedstoneTiny.name=Tiny Pile of Redstone Dust
+item.unreal:dustGlowstoneTiny.name=Tiny Pile of Glowstone Dust
+item.unreal:dustNetherQuartzTiny.name=Tiny Pile of Nether Quartz Dust
+item.unreal:dustDiamondTiny.name=Tiny Pile of Diamond Dust
+item.unreal:dustEmeraldTiny.name=Tiny Pile of Emerald Dust
+item.unreal:dustObsidianTiny.name=Tiny Pile of Obsidian Dust
+item.unreal:dustLithiumTiny.name=Tiny Pile of Lithium Dust
+item.unreal:dustGunpowderTiny.name=Tiny Pile of Gunpowder
+# (Health)
+item.unreal:healthSuperEmpty.name=Super Health (Empty)
+item.unreal:healthSuper.name=Super Health
+# (Misc Pickups)
+item.unreal:invisibility.name=Invisibility
+
+# Item Descriptions
+item.record.longFlight.desc=Unreal - Long Flight
+
+# Blocks
+tile.unreal:blockTitanium.name=Block of Titanium
+tile.unreal:blockRutile.name=Block of Impure Titanium
+tile.unreal:oreRutile.name=Rutile Ore
+tile.unreal:blockMagnesium.name=Block of Magnesium
+tile.unreal:oreMagnesium.name=Magnesium Ore
+tile.unreal:blockTarydium.name=Block of Tarydium
+tile.unreal:oreTarydium.name=Tarydium Ore
+tile.unreal:oreTarydiumNether.name=Tarydium Ore
+tile.unreal:oreTarydiumEnd.name=Tarydium Ore
+tile.unreal:oreTarydiumObsidian.name=Tarydium Ore
+tile.unreal:blockCommandCosmetic.name=Command Block
+tile.unreal:blockBedrockium.name=Block of Bedrockium
+tile.unreal:oreBedrockium.name=Bedrockium Ore
+tile.unreal:oreBedrockiumHidden.name=Bedrock
+tile.unreal:blockAsbestos.name=Block of Asbestos
+tile.unreal:oreAsbestos.name=Asbestos Ore
+tile.unreal:blockLithium.name=Block of Lithium
+tile.unreal:cactusTarydium.name=Tarydium-infused Cactus
+tile.unreal:ladderIron.name=Iron Ladder
+tile.unreal:cobblestonePaved.name=Paved Cobblestone
+tile.unreal:stonePolished.name=Polished Stone
+tile.unreal:slabStoneSmooth.name=Smooth Stone Slab
+tile.unreal:obsidianNether.name=Nether-infused Obsidian
+tile.unreal:netherrackCompressed1x.name=Compressed Netherrack
+tile.unreal:netherrackCompressed2x.name=Double Compressed Netherrack
+tile.unreal:netherrackCompressed3x.name=Triple Compressed Netherrack
+tile.unreal:netherrackCompressed4x.name=Quadruple Compressed Netherrack
+tile.unreal:endStoneCompressed1x.name=Compressed End Stone
+tile.unreal:endStoneCompressed2x.name=Double Compressed End Stone
+tile.unreal:endStoneCompressed3x.name=Triple Compressed End Stone
+tile.unreal:endStoneCompressed4x.name=Quadruple Compressed End Stone
+tile.unreal:blockCinnabar.name=Block of Cinnabar
+tile.unreal:blockUUTC.name=Block of U.U.T.C.
+tile.unreal:blockTarydiumAlloyUnrefined.name=Block of Unrefined Tarydium Alloy
+tile.unreal:blockTarydiumAlloyRefined.name=Block of Refined Tarydium Alloy
+tile.unreal:blockEnderCrystal.name=Ender Crystal
+tile.unreal:blockFlint.name=Block of Flint
+tile.unreal:blockCharcoal.name=Block of Charcoal
+tile.unreal:blockGunpowder.name=Block of Gunpowder
+tile.unreal:blockEnder.name=Ender Pearl Block
+tile.unreal:blockLeather.name=Block of Leather
+tile.unreal:blockSlime.name=Slime Block
+tile.unreal:blockBlaze.name=Blaze Rod Block
+tile.unreal:blockGhastTear.name=Crystalline Tear Block
+tile.unreal:blockNetherWart.name=Compacted Nether Wart Block
+tile.unreal:blockCocoa.name=Cocoa Block
+tile.unreal:blockInk.name=Block of Ink
+tile.unreal:blockForceField.name=Force Field
+tile.unreal:blockTarydiumFieldCollector.name=Tarydium Field Accumulator
+tile.unreal:blockTarydiumFieldEmitter.name=Tarydium Field Distributor
+tile.unreal:blockTarydiumFieldRelay.name=Tarydium Field Relayer
+tile.unreal:blockTarydiumFieldStasis.name=Tarydium Field Stasis
+tile.unreal:blockTarydiumCrystal.name=Tarydium Crystal
+tile.unreal:blockGoldCorrugated.name=Corrugated Block of Gold
+tile.unreal:blockDiamondCorrugated.name=Corrugated Block of Diamond
+tile.unreal:blockIronSmooth.name=Smooth Block of Iron
+tile.unreal:blockMachineFrameBasic.name=Basic Machine Core
+
+# Fluids
+fluid.mercury=Mercury
+fluid.mercury.name=Mercury
+tile.unreal:fluidBlockMercury.name=Mercury
+fluid.tarydiumsludge=Tarydium Sludge
+fluid.tarydiumsludge.name=Tarydium Sludge
+tile.unreal:fluidBlockTarydiumSludge.name=Tarydium Sludge
+fluid.health=Health
+fluid.health.name=Health
+tile.unreal:fluidBlockHealth.name=Health
+fluid.nanoblack=Nanoblack
+fluid.nanoblack.name=Nanoblack
+tile.unreal:fluidBlockNanoblack.name=Nanoblack
+
+# Creative Tabs
+itemGroup.unreal=Unreal
+
+# Keys
+keys.unreal.category=Unreal
+keys.unreal.modeSwitch=Switch Weapon Mode
+keys.unreal.reload=Reload Weapon

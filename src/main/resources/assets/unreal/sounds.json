@@ -1,0 +1,125 @@
+{
+	"records.longFlight": {
+		"category": "record",
+		"sounds": [
+			{
+				"name": "records/FlightCastle",
+				"stream": true
+			}
+		]
+	},
+    "item.ammoPickup": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "items/ut99/ammopick"
+            }
+        ]
+    },
+    "weapons.hit": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "weapons/ut99/hit1",
+                "name": "weapons/ut99/hit2",
+                "name": "weapons/ut99/hit3"
+            }
+        ]
+    },
+    "weapons.hit1": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "weapons/ut99/hit1"
+            }
+        ]
+    },
+    "weapons.gunTranslocator.fire": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "items/ut99/throwtarget"
+            }
+        ]
+    },
+    "weapons.gunTranslocator.recall": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "items/ut99/returntarget"
+            }
+        ]
+    },
+    "entity.translocatorDisc.hum": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "items/ut99/targethum"
+            }
+        ]
+    },
+    "entity.translocatorDisc.teleport": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "misc/ut99/resp2a"
+            }
+        ]
+    },
+    "weapons.gunDispersionPistol.fire": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "weapons/Unreal/Dispersion Pistol/Dispersion Pistol Fire"
+            }
+        ]
+    },
+    "weapons.gunStinger.fire": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "weapons/Unreal/Stinger/Stinger LoopFire"
+            }
+        ]
+    },
+    "weapons.gunStinger.startFire": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "weapons/Unreal/Stinger/Stinger StartFire"
+            }
+        ]
+    },
+    "weapons.gunFlakCannon.fire": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "weapons/Unreal/Flak Cannon/Flak Cannon Fire"
+            }
+        ]
+    },
+    "weapons.gunFlakCannon.reload": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "weapons/Unreal/Flak Cannon/Flak Cannon Reload"
+            }
+        ]
+    },
+    "weapons.gunEightballLauncher.fire": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "weapons/Unreal/Eightball/Eightball Fire"
+            }
+        ]
+    },
+    "weapons.gunRedeemer.fire": {
+        "category": "player",
+        "sounds": [
+            {
+                "name": "weapons/ut99/warheadshot"
+            }
+        ]
+    }
+}

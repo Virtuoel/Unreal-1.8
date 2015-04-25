@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "age=0": { "model": "unreal:cactusTarydium" },
+        "age=1": { "model": "unreal:cactusTarydium" },
+        "age=2": { "model": "unreal:cactusTarydium" },
+        "age=3": { "model": "unreal:cactusTarydium" },
+        "age=4": { "model": "unreal:cactusTarydium" },
+        "age=5": { "model": "unreal:cactusTarydium" },
+        "age=6": { "model": "unreal:cactusTarydium" },
+        "age=7": { "model": "unreal:cactusTarydium" },
+        "age=8": { "model": "unreal:cactusTarydium" },
+        "age=9": { "model": "unreal:cactusTarydium" },
+        "age=10": { "model": "unreal:cactusTarydium" },
+        "age=11": { "model": "unreal:cactusTarydium" },
+        "age=12": { "model": "unreal:cactusTarydium" },
+        "age=13": { "model": "unreal:cactusTarydium" },
+        "age=14": { "model": "unreal:cactusTarydium" },
+        "age=15": { "model": "unreal:cactusTarydium" }
+    }
+}

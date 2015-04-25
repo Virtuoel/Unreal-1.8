@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "unreal:blocks/endStoneCompressed2x"
+    }
+}

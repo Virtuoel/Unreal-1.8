@@ -1,0 +1,332 @@
+Versions:
+
+Current: 0.2.0.12
+
+Features:(A Lot Currently NYI)
+
+Weapons:
+Translocator
+Chainsaw
+Dispersion Pistol
+Stinger
+Flak Cannon
+Eightball Launcher
+Redeemer
+
+Armor:
+Shield Belt
+Jump Boots
+SCUBA Gear
+Asbestos Suit
+Toxin Suit
+
+Tools:
+Noise Box
+
+WorldGen:
+Rutile Ore
+Magnesium Ore
+Tarydium Ore
+Asbestos Ore
+
+Inspired by mods: Extra Utilities, Mariculture, IC2, Tinker's Construct, and more!
+
+Syntax List
+-----------
+[Addition]
+[Bugfix]
+[Balance]
+[Change]
+[Removal]
+[Bug]
+[WorldGen]
+[Partial]
+[Version]
+[Update]
+[Progress]
+[Internal]
+[Compatibility]
+[Integration]
+[Temporary]
+[API]
+[WIP]
+[MP]
+[SP]
+[LAN]
+
+//TODO:
+-Armor Material Texture Name
+-Material names to reference file
+-updateItemStackNBT(NBTTagCompound tag) for weapons
+-Shield Belt model
+-config setting for golden apple for health bucket
+
+Changelog:
+
+0.2.0.12
+---
+[Change] More sound tweaks
+[Addition] Invisibility Item and Recipe
+
+0.2.0.11
+---
+[Addition] Armor Textures
+[Addition] Super Health Item and Recipe
+
+0.2.0.10
+---
+[Change] Misc recipe tweaks
+[Addition] Weapon sounds! (for some at least)
+[Change] Tweaks to weapon data
+[Bug] Weapons bounce around in your hand in first person when you fire them 
+
+0.2.0.9
+---
+[Change] Fixed ItemBlocks, no separate items for the ItemBlocks now
+[Addition] Ink Sac storage block, Decorative Smooth Iron Block
+[Addition] Tarydium Sludge Debug Recipe
+
+0.2.0.8
+---
+[Change] Translocator tweaks
+[Addition] Jump Boots provide step assist
+
+0.2.0.7
+---
+[Addition][Change] Many more ItemBlocks, tooltips, and some more potion effects for some items
+[Removal][Change] Fluids and fluid blocks removed. Buckets no longer function, but will still exist
+
+0.2.0.6
+---
+[Addition] Lithium ingot, nugget, block, dust, and tiny dust
+[Balance][Change] Brilithium Power Core now uses Lithium instead of Titanium
+[Bugfix][Change] Asbestos Blocks now poison the holder
+[Bugfix] Force Field breaking on 2nd use fixed
+
+0.2.0.5
+---
+[Addition] All the Tiny Dusts
+
+0.2.0.4
+---
+[Update][Progress] Blocks with non-cube models functioning properly
+[Update][Progress] Transparent blocks rendering properly
+[Addition] Machine Core Block and recipe for machine (currently makes Debug Tool)
+[Change] Recipe balancing
+
+0.2.0.3
+---
+[Update][Progress] Everything ported directly. Various fixes where needed
+
+0.2.0.2
+---
+[Update][Progress] All blocks ported
+
+0.2.0.1
+---
+[Update][Progress] All items ported
+
+0.2.0.0
+---
+[Update][Version] Porting to 1.8 started
+
+----------------
+
+0.1.0.46
+---
+[Addition] Decorative Gold and Diamond Blocks
+
+0.1.0.45
+---
+[Addition] Debug config setting to print texture names
+[Bugfix] Fixed some recipes
+[Bugfix] Fixed Tarydium Energy Crystal not having visible durability
+[Addition] Temporary textures for energy blocks
+
+0.1.0.44
+---
+[Addition] Gold Rod crafting component
+[Change] Recipe tweaks
+
+0.1.0.43
+---
+[Addition] Started work on placeholder blocks for energy transfer and storage system
+[Addition] Component items and recipes for energy manipulation blocks
+
+0.1.0.42
+---
+[Change][Bugfix] Tweaks and fixes to all damageable items and their recipes
+[Change] Tarydium Energy Crystal now has durability
+
+0.1.0.41
+---
+[Addition] Force Field functional
+[Addition] Force Field and Translator textures
+[Balance] Recipe rebalancing
+
+0.1.0.40
+---
+[Addition] Iron and Titanium Rods
+[Balance] Some recipe rebalancing
+
+0.1.0.39
+---
+[Addition] Recipes for Force Field and Universal Translator
+[Addition] Force field decays over time
+[Change][Internal] Internal fixes and tweaks, texture cleanup
+[Balance] Titanium armor rebalanced
+
+0.1.0.38
+---
+[Addition] Started work on Force Field and Universal Translator
+[Change] Tweak to Slime Block rendering
+
+0.1.0.37
+---
+[Addition] Nanoblack Bucket and Fluid
+[Update][Progress] Bedrockium Ore functionality ported
+
+0.1.0.36
+---
+[Addition] Health Bucket and Fluid
+
+0.1.0.35
+---
+[Addition] Tarydium Sludge Bucket and Fluid
+[Update][Progress] Long Flight record ported
+
+0.1.0.34
+---
+[Bugfix] Many fluid-related fixes
+[Addition] Localization for fluids
+[Change][Internal] Many internal changes with code regarding blocks and items
+
+0.1.0.33
+---
+[Addition] Mercury Fluid added
+[Change] Mercury Bucket's contents can be placed and picked up
+
+0.1.0.32
+---
+[Addition] Slime armor slowly repairs. Repairs faster in rain or water
+
+0.1.0.31
+---
+[Addition] Titanium Helmet, Chestplate, Leggings, and Boots
+[Addition] Slime Helmet, Chestplate, Leggings, and Boots
+
+0.1.0.30
+---
+[Update][Progress] Work on Translocator
+[Compatibility][Integration][WIP] Working on deciding good EMC values for items
+
+0.1.0.29
+---
+[Balance] Eightball Launcher recipe rebalanced
+[Balance] Cinnabar debug grinding recipe rebalanced
+[Compatibility][Integration] Debug grinding recipe for Titanium Ore for compatability
+[Compatibility][Integration] Debug grinding recipe for Cinnabar Ore for compatability
+
+0.1.0.28
+---
+[Update][Progress] More work on weapons and projectiles
+
+0.1.0.27
+---
+[Addition] Damage sources and death message localization
+
+0.1.0.26
+---
+[Addition][Compatibility][Integration][API] Started working on NEI integration
+
+0.1.0.25
+---
+[Update][Progress] Weapon projectile porting started
+
+0.1.0.24
+---
+[Addition] Config setting to allow either 4 or 9 Ender Pearls per Ender Pearl Block
+
+0.1.0.23
+---
+[Balance] Asbestos Suit recipe rebalanced
+[Bugfix][WorldGen] Fixed Ender Tarydium generating in the Nether
+
+0.1.0.22
+---
+[Update][Progress] All special armor now functional
+
+0.1.0.19
+---
+[Update][Progress] Ported Voice Box 
+
+0.1.0.17
+---
+[Update][Progress] Base weapon class complete
+
+0.1.0.9
+---
+[Update][Progress] All blocks ported over
+
+0.1.0.0
+---
+[Update][Version] Porting to 1.7.10 started
+
+----------------
+
+0.0.11.0
+---
+[Addition] Bedrockium Ingots, Nuggets, and Blocks
+[Addition] Ender Crystal Block can now be used to create Ender Crystal Entities
+[Addition] Cinnabar Crystal, Dust, and Block for Mercury creation
+[Addition] Polished Stone Blocks (Full Stone Slabs)
+[Addition] Slabs can be crafted back into full blocks
+[Addition] Dragon Egg Reproduction Recipe
+[Change] Tweaked debug tool refueling
+[Change] Tweaked materials
+[Change] Bedrockium recipe for U.U.T.C. rebalanced to nuggets
+[Change][WIP] Chat message shown when attempting to toggle weapon modes
+[Change] Debug tool can be used as furnace fuel
+[Bug] Mode switch affects all weapons of the same type
+
+0.0.10.0
+---
+[Addition] Ender Crystal Block
+[Addition] Alternate Bedrockium Ingot recipe for U.U.T.C.
+[Change][WIP] Stinger Harvest Levels can be increased for an increase in shard usage.
+
+0.0.9.0
+---
+[Balance] Recipe Tweaks: Warhead, Shield Belt, Eightball Launcher, Translocator
+[Addition] Chainsaw, Chain, Chainsaw Blade, Hardened Chainsaw Blade
+[Addition] Dispersion Pistol and Upgrade
+[Addition] Various metal items can be smelted back into their main component ingots, with slight loss
+[Change] Changed Titanium Texture
+[Addition] Iron Dust, Gold Dust, Titanium Dust
+[Addition][WorldGen] Rutile and Magnesium Ore, Ingots, Dusts, Nuggets, and Blocks
+[Change] Magnesium needed for purifying raw Titanium (Rutile)
+[Addition][WorldGen] Asbestos Ore, Dust, and Blocks
+[Addition][WIP] Debug Tool used for machine processing until machines are added
+[Addition] U.U.T.C and Refined Alloy
+[Addition] Compressed Netherrack and End Stone up to 4x
+[Addition] Coal, Charcoal, Flint, and Gunpowder Storage Blocks 
+[Addition] Blaze Rod, Ghast Tear, Slimeball, and Nether Wart Storage Blocks
+[Addition] Coal, Charcoal, and Blaze Rod Blocks can be used as furnace fuel
+[Addition] Toxin Suit, SCUBA Tanks, SCUBA Gear
+[Addition] Mercury Bucket and Asbestos Suit
+[Addition] Noise Box
+[Bugfix] Translocator now tps the correct user
+[Bug][MP][LAN] Only 1 Translocator disk can exist at a time
+
+0.0.8.0
+---
+[Addition] Iron Casings for cheaper Flak Shells
+[Bugfix][MP] Translocator crash bug fixed
+[Bugfix][MP] Flak Cannon crash bug fixed
+[Bug][MP][LAN] Translocator tps the last shooter no matter the user
+[Balance] Casings now give 2 per recipe
+[Change] Jump boots now use iron armor material
+[Addition] Eightball rocket recipe
+
+0.0.1.0 - 0.0.7.0:
+--Undocumented--
