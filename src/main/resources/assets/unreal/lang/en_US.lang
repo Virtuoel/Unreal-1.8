@@ -170,8 +170,8 @@ item.unreal:dustObsidianTiny.name=Tiny Pile of Obsidian Dust
 item.unreal:dustLithiumTiny.name=Tiny Pile of Lithium Dust
 item.unreal:dustGunpowderTiny.name=Tiny Pile of Gunpowder
 # (Health)
-item.unreal:healthSuperEmpty.name=Super Health (Empty)
-item.unreal:healthSuper.name=Super Health
+item.unreal:healthSuperEmpty.name=Super Health Pack (Empty)
+item.unreal:healthSuper.name=Super Health Pack
 # (Misc Pickups)
 item.unreal:invisibility.name=Invisibility
 

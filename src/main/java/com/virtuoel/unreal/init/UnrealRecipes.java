@@ -1907,6 +1907,9 @@ public class UnrealRecipes
 		GameRegistry.addSmelting(UnrealItems.healthSuperEmpty, 
 				new ItemStack(UnrealItems.ingotTitanium,24), 0.1F);
 		
+		GameRegistry.addSmelting(UnrealItems.invisibility, 
+				new ItemStack(UnrealItems.ingotMagnesium,20), 0.1F);
+		
 	}
 	
 	public static void initOreDict()
