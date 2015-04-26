@@ -375,6 +375,7 @@ public class EntityTranslocatorDisc extends EntityProjectileUnreal
     public void onCollideWithPlayer(EntityPlayer entityIn)
     {
         if (!teleported && 
+        		!entityIn.isSneaking() &&
         		/*(*/this.shootingEntity != null && 
         		//this.shootingEntity.getUniqueID().equals(entityIn.getUniqueID())) && 
         		(!this.worldObj.isRemote && 

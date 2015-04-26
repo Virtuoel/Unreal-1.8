@@ -1,5 +1,6 @@
 package com.virtuoel.unreal.init;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -539,660 +540,184 @@ public class UnrealRecipes
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealBlocks.blockTarydium,1), new Object[]{
 			UnrealBlocks.blockUUTC,"virtuoel.unreal.debug"
 			}));
-		//TODO debug recipe end ---------------------------------------------------------------------------------------------------------------------------------
+		//TODO debug recipe end ---------------------------------------------------------------------------------------------------------------------------------																																																																											
 		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockTitanium,1), new Object[]{
-			"TTT","TTT","TTT",'T',"ingotTitanium",
-			}));
+		//begin 3x3 and 2x2 recipes
+		Object[][] squareRecipes = {
+		{//0: 9 crafted into 1 of this
+			UnrealBlocks.blockTitanium,               UnrealItems.ingotTitanium,                UnrealBlocks.blockRutile,                UnrealItems.ingotRutile,
+			UnrealBlocks.blockMagnesium,              UnrealItems.ingotMagnesium,               UnrealBlocks.blockTarydiumAlloyRefined,  UnrealItems.ingotTarydiumAlloyRefined,
+			UnrealBlocks.blockTarydiumAlloyUnrefined, UnrealItems.ingotTarydiumAlloyUnrefined,  UnrealBlocks.blockTarydium,              UnrealItems.gemTarydium,
+			UnrealBlocks.blockLeather,                UnrealBlocks.blockGunpowder,              UnrealBlocks.blockFlint,                 UnrealBlocks.blockBlaze,
+			UnrealBlocks.blockGhastTear,              UnrealBlocks.blockNetherWart,             UnrealBlocks.blockAsbestos,              UnrealBlocks.blockCharcoal,
+			UnrealBlocks.blockBedrockium,             UnrealItems.ingotBedrockium,              UnrealBlocks.blockCinnabar,              UnrealBlocks.blockCocoa,
+			UnrealBlocks.blockLithium,                UnrealItems.ingotLithium,                 UnrealBlocks.blockInk,                   UnrealBlocks.blockSlimeBlack,
+			UnrealBlocks.netherrackCompressed1x,      UnrealBlocks.netherrackCompressed2x,      UnrealBlocks.netherrackCompressed3x,     UnrealBlocks.netherrackCompressed4x,
+			UnrealBlocks.endStoneCompressed1x,        UnrealBlocks.endStoneCompressed2x,        UnrealBlocks.endStoneCompressed3x,       UnrealBlocks.endStoneCompressed4x,
+		},{//1: 9 crafted from 1 of this
+			"blockTitanium",                          "ingotTitanium",                          "blockRutile",                           "ingotRutile",
+			"blockMagnesium",                         "ingotMagnesium",                         "blockTarydiumAlloyRefined",             "ingotTarydiumAlloyRefined",
+			"blockTarydiumAlloyUnrefined",            "ingotTarydiumAlloyUnrefined",            "blockTarydium",                         "gemTarydium",
+			"blockLeather",                           "blockGunpowder",                         "blockFlint",                            "blockBlaze",
+			"blockTear",                              "blockNetherWart",                        "blockAsbestos",                         "blockCharcoal",
+			"blockBedrockium",                        "ingotBedrockium",                        "blockCinnabar",                         "blockCocoa",
+			"blockLithium",                           "ingotLithium",                           "blockInk",                              "blockSlimeBlack",
+			"compressedNetherrack1x",                 "compressedNetherrack2x",                 "compressedNetherrack3x",                "compressedNetherrack4x",
+			"compressedEndStone1x",                   "compressedEndStone2x",                   "compressedEndStone3x",                  "compressedEndStone4x",
+		},{//2: 1 crafted into 9 of this
+			UnrealItems.ingotTitanium,                UnrealItems.nuggetTitanium,               UnrealItems.ingotRutile,                 UnrealItems.nuggetRutile,
+			UnrealItems.ingotMagnesium,               UnrealItems.nuggetMagnesium,              UnrealItems.ingotTarydiumAlloyRefined,   UnrealItems.nuggetTarydiumAlloyRefined,
+			UnrealItems.ingotTarydiumAlloyUnrefined,  UnrealItems.nuggetTarydiumAlloyUnrefined, UnrealItems.gemTarydium,                 UnrealItems.shardTarydium,
+			Items.leather,                            Items.gunpowder,                          Items.flint,                             Items.blaze_rod,
+			Items.ghast_tear,                         Items.nether_wart,                        UnrealItems.dustAsbestos,                Items.coal,
+			UnrealItems.ingotBedrockium,              UnrealItems.nuggetBedrockium,             UnrealItems.crystalCinnabar,             Items.dye,
+			UnrealItems.ingotLithium,                 UnrealItems.nuggetLithium,                Items.dye,                               UnrealItems.slimeballBlack,
+			Blocks.netherrack,                        UnrealBlocks.netherrackCompressed1x,      UnrealBlocks.netherrackCompressed2x,     UnrealBlocks.netherrackCompressed3x,
+			Blocks.end_stone,                         UnrealBlocks.endStoneCompressed1x,        UnrealBlocks.endStoneCompressed2x,       UnrealBlocks.endStoneCompressed3x,
+		},{//3: 1 crafted from 9 of this
+			"ingotTitanium",                          "nuggetTitanium",                         "ingotRutile",                          "nuggetRutile",
+			"ingotMagnesium",                         "nuggetMagnesium",                        "ingotTarydiumAlloyRefined",            "nuggetTarydiumAlloyRefined",
+			"ingotTarydiumAlloyUnrefined",            "nuggetTarydiumAlloyUnrefined",           "gemTarydium",                          "shardTarydium",
+			Items.leather,                            "dustGunpowder",                          Items.flint,                            "rodBlaze",
+			"itemTear",                               "cropNetherWart",                         "dustAsbestos",                         "charcoal",
+			"ingotBedrockium",                        "nuggetBedrockium",                       "crystalCinnabar",                      "cropCocoa",
+			"ingotLithium",                           "nuggetLithium",                          "itemInkSac",                           "slimeballBlack",
+			"netherrack",                             "compressedNetherrack1x",                 "compressedNetherrack2x",               "compressedNetherrack3x",
+			"endStone",                               "compressedEndStone1x",                   "compressedEndStone2x",                 "compressedEndStone3x",
+		},{//4: component damage
+			0,0,0,0,
+			0,0,0,0,
+			0,0,0,0,
+			0,0,0,0,
+			0,0,0,1,
+			0,0,0,3,
+			0,0,0,0,
+			0,0,0,0,
+			0,0,0,0
+		},{//5: crafts into an item instead of a block
+			false, true,  false, true,
+			false, true,  false, true,
+			false, true,  false, true,
+			false, false, false, false,
+			false, false, false, false,
+			false, true,  false, false,
+			false, true,  false, false,
+			false, false, false, false,
+			false, false, false, false
+		},{//6: crafts from items instead of blocks
+			true,  true,  true,  true,
+			true,  true,  true,  true,
+			true,  true,  true,  true,
+			true,  true,  true,  true,
+			true,  true,  true,  true,
+			true,  true,  true,  true,
+			true,  true,  true,  true,
+			false, false, false, false,
+			false, false, false, false
+		},{//7: crafted from this many materials
+			9,9,9,9,
+			9,9,9,9,
+			9,9,9,9,
+			9,9,9,9,
+			9,9,9,9,
+			9,9,9,9,
+			9,9,9,9,
+			9,9,9,9,
+			9,9,9,9
+		}};
 		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotTitanium,9), new Object[]{
-			"T",'T',"blockTitanium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotTitanium,1), new Object[]{
-			"TTT","TTT","TTT",'T',"nuggetTitanium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.nuggetTitanium,9), new Object[]{
-			"T",'T',"ingotTitanium",
-			}));
-		//
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockRutile,1), new Object[]{
-			"TTT","TTT","TTT",'T',"ingotRutile",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotRutile,9), new Object[]{
-			"T",'T',"blockRutile",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotRutile,1), new Object[]{
-			"TTT","TTT","TTT",'T',"nuggetRutile",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.nuggetRutile,9), new Object[]{
-			"T",'T',"ingotRutile",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockMagnesium,1), new Object[]{
-			"TTT","TTT","TTT",'T',"ingotMagnesium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotMagnesium,9), new Object[]{
-			"T",'T',"blockMagnesium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotMagnesium,1), new Object[]{
-			"TTT","TTT","TTT",'T',"nuggetMagnesium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.nuggetMagnesium,9), new Object[]{
-			"T",'T',"ingotMagnesium",
-			}));
-		//
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotTarydiumAlloyRefined,9), new Object[]{
-			"T",'T',"blockTarydiumAlloyRefined",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotTarydiumAlloyRefined,1), new Object[]{
-			"TTT","TTT","TTT",'T',"nuggetTarydiumAlloyRefined",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.nuggetTarydiumAlloyRefined,9), new Object[]{
-			"T",'T',"ingotTarydiumAlloyRefined",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockTarydiumAlloyRefined,1), new Object[]{
-			"TTT","TTT","TTT",'T',"ingotTarydiumAlloyRefined",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotTarydiumAlloyUnrefined,9), new Object[]{
-			"T",'T',"blockTarydiumAlloyUnrefined",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotTarydiumAlloyUnrefined,1), new Object[]{
-			"TTT","TTT","TTT",'T',"nuggetTarydiumAlloyUnrefined",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.nuggetTarydiumAlloyUnrefined,9), new Object[]{
-			"T",'T',"ingotTarydiumAlloyUnrefined",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockTarydiumAlloyUnrefined,1), new Object[]{
-			"TTT","TTT","TTT",'T',"ingotTarydiumAlloyUnrefined",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.gemTarydium,1), new Object[]{
-			"TTT","TTT","TTT",'T',"shardTarydium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.shardTarydium,9), new Object[]{
-			"T",'T',"gemTarydium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockTarydium,1), new Object[]{
-			"TTT","TTT","TTT",'T',"gemTarydium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.gemTarydium,9), new Object[]{
-			"T",'T',"blockTarydium",
-			}));
-		
-		if(Settings.Crafting.ninePearlsPerEnderBlock)
+		for(int i=0;i<squareRecipes[0].length;i++)
 		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockEnder,1), new Object[]{
-				"CCC","CCC","CCC",'C',Items.ender_pearl,
-				}));
 			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.ender_pearl,9), new Object[]{
-				"C",'C',"blockEnder",
-				}));
+			GameRegistry.addRecipe((Integer) squareRecipes[7][i]==9?(Boolean)squareRecipes[5][i]?
+			new ShapedOreRecipe(new ItemStack((Item) squareRecipes[0][i],1), new Object[]{
+				"TTT","TTT","TTT",'T',squareRecipes[3][i],
+				}):
+			new ShapedOreRecipe(new ItemStack((Block)squareRecipes[0][i],1), new Object[]{
+				"TTT","TTT","TTT",'T',squareRecipes[3][i],
+				}):
+																  (Boolean)squareRecipes[5][i]?
+			new ShapedOreRecipe(new ItemStack((Item) squareRecipes[0][i],1), new Object[]{
+				"TT","TT",'T',squareRecipes[3][i],
+				}):
+			new ShapedOreRecipe(new ItemStack((Block)squareRecipes[0][i],1), new Object[]{
+				"TT","TT",'T',squareRecipes[3][i],
+				})
+			);
 			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.ender_pearl,9), new Object[]{
-				"C",'C',"blockEnderPearl",
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockEnder,1), new Object[]{
-				"CC","CC",'C',Items.ender_pearl,
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.ender_pearl,4), new Object[]{
-				"C",'C',"blockEnder",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.ender_pearl,4), new Object[]{
-				"C",'C',"blockEnderPearl",
-				}));
+			GameRegistry.addRecipe((Boolean)squareRecipes[6][i]?
+			new ShapedOreRecipe(new ItemStack((Item)squareRecipes[2][i],(Integer) squareRecipes[7][i],(Integer) squareRecipes[4][i]), new Object[]{
+				"T",'T',squareRecipes[1][i],
+			}):
+			new ShapedOreRecipe(new ItemStack((Block)squareRecipes[2][i],(Integer) squareRecipes[7][i],(Integer) squareRecipes[4][i]), new Object[]{
+				"T",'T',squareRecipes[1][i],
+			})
+			);
 		}
 		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockLeather,1), new Object[]{
-			"TTT","TTT","TTT",'T',Items.leather,
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockEnder,1), Settings.Crafting.ninePearlsPerEnderBlock
+			?new Object[]{"TTT","TTT","TTT",'T',Items.ender_pearl,}
+			:new Object[]{"TT", "TT" ,      'T',Items.ender_pearl,}
+			));
+		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.ender_pearl,Settings.Crafting.ninePearlsPerEnderBlock?9:4), new Object[]{
+			"T",'T',"blockEnder",
 			}));
 		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.leather,9), new Object[]{
-			"C",'C',"blockLeather",
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.ender_pearl,Settings.Crafting.ninePearlsPerEnderBlock?9:4), new Object[]{
+			"T",'T',"blockEnderPearl",
 			}));
 		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.gunpowder,9), new Object[]{
-			"T",'T',"blockGunpowder",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockFlint,1), new Object[]{
-			"TTT","TTT","TTT",'T',Items.flint,
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.flint,9), new Object[]{
-			"T",'T',"blockFlint",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockGunpowder,1), new Object[]{
-			"TTT","TTT","TTT",'T',"dustGunpowder",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.blaze_rod,9), new Object[]{
-			"T",'T',"blockBlaze",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockBlaze,1), new Object[]{
-			"TTT","TTT","TTT",'T',"rodBlaze",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.ghast_tear,9), new Object[]{
-			"T",'T',"blockTear",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockGhastTear,1), new Object[]{
-			"TTT","TTT","TTT",'T',"itemTear",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockNetherWart,1), new Object[]{
-			"TTT","TTT","TTT",'T',"cropNetherWart",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.nether_wart,9), new Object[]{
-			"T",'T',"blockNetherWart",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockAsbestos,1), new Object[]{
-			"TTT","TTT","TTT",'T',"dustAsbestos",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustAsbestos,9), new Object[]{
-			"C",'C',"blockAsbestos",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockCharcoal,1), new Object[]{
-			"TTT","TTT","TTT",'T',"charcoal",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.coal,9,1), new Object[]{
-			"C",'C',"blockCharcoal",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotBedrockium,9), new Object[]{
-			"T",'T',"blockBedrockium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotBedrockium,1), new Object[]{
-			"TTT","TTT","TTT",'T',"nuggetBedrockium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.nuggetBedrockium,9), new Object[]{
-			"T",'T',"ingotBedrockium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockBedrockium,1), new Object[]{
-			"TTT","TTT","TTT",'T',"ingotBedrockium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.crystalCinnabar,9), new Object[]{
-			"T",'T',"blockCinnabar",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockCinnabar,1), new Object[]{
-			"TTT","TTT","TTT",'T',"crystalCinnabar",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.dye,9,3), new Object[]{
-			"T",'T',"blockCocoa",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockCocoa,1), new Object[]{
-			"TTT","TTT","TTT",'T',"cropCocoa",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.dye,9,0), new Object[]{
-			"T",'T',"blockInk",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockInk,1), new Object[]{
-			"TTT","TTT","TTT",'T',"itemInkSac",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotLithium,9), new Object[]{
-			"T",'T',"blockLithium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.ingotLithium,1), new Object[]{
-			"TTT","TTT","TTT",'T',"nuggetLithium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.nuggetLithium,9), new Object[]{
-			"T",'T',"ingotLithium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockLithium,1), new Object[]{
-			"TTT","TTT","TTT",'T',"ingotLithium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.slimeballBlack,9), new Object[]{
-			"T",'T',"blockSlimeBlack",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockSlimeBlack,1), new Object[]{
-			"TTT","TTT","TTT",'T',"slimeballBlack",
-			}));
 		//end blocks ---------------------------------------------------------------------------------------------------------------------------------
-		if(Settings.Crafting.nineTinyDustPerTitaniumDust)
+		
+		Object[][] dustRecipes = {
 		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustTitaniumTiny,9), new Object[]{
-				"T",'T',"dustTitanium",
+			Settings.Crafting.nineTinyDustPerTitaniumDust,             Settings.Crafting.nineTinyDustPerRutileDust,    Settings.Crafting.nineTinyDustPerMagnesiumDust,
+			Settings.Crafting.nineTinyDustPerCinnabarDust,             Settings.Crafting.nineTinyDustPerAsbestosDust,  Settings.Crafting.nineTinyDustPerTarydiumAlloyUnrefinedDust,
+			Settings.Crafting.nineTinyDustPerTarydiumAlloyRefinedDust, Settings.Crafting.nineTinyDustPerCoalDust,      Settings.Crafting.nineTinyDustPerCharcoalDust,
+			Settings.Crafting.nineTinyDustPerIronDust,                 Settings.Crafting.nineTinyDustPerLapisDust,     Settings.Crafting.nineTinyDustPerGoldDust,
+			Settings.Crafting.nineTinyDustPerRedstoneDust,             Settings.Crafting.nineTinyDustPerGlowstoneDust, Settings.Crafting.nineTinyDustPerNetherQuartzDust,
+			Settings.Crafting.nineTinyDustPerDiamondDust,              Settings.Crafting.nineTinyDustPerEmeraldDust,   Settings.Crafting.nineTinyDustPerObsidianDust,
+			Settings.Crafting.nineTinyDustPerLithiumDust,              Settings.Crafting.nineTinyDustPerGunpowderDust
+		},{
+			UnrealItems.dustTitanium,                                  UnrealItems.dustRutile,                         UnrealItems.dustMagnesium,
+			UnrealItems.dustCinnabar,                                  UnrealItems.dustAsbestos,                       UnrealItems.dustTarydiumAlloyUnrefined,
+			UnrealItems.dustTarydiumAlloyRefined,                      UnrealItems.dustCoal,                           UnrealItems.dustCharcoal,
+			UnrealItems.dustIron,                                      UnrealItems.dustLapis,                          UnrealItems.dustGold,
+			Items.redstone,                                            Items.glowstone_dust,                           UnrealItems.dustNetherQuartz,
+			UnrealItems.dustDiamond,                                   UnrealItems.dustEmerald,                        UnrealItems.dustObsidian,
+			UnrealItems.dustLithium,                                   Items.gunpowder,
+		},{
+			UnrealItems.dustTitaniumTiny,                              UnrealItems.dustRutileTiny,                     UnrealItems.dustMagnesiumTiny,                  
+			UnrealItems.dustCinnabarTiny,                              UnrealItems.dustAsbestosTiny,                   UnrealItems.dustTarydiumAlloyUnrefinedTiny,
+			UnrealItems.dustTarydiumAlloyRefinedTiny,                  UnrealItems.dustCoalTiny,                       UnrealItems.dustCharcoalTiny,
+			UnrealItems.dustIronTiny,                                  UnrealItems.dustLapisTiny,                      UnrealItems.dustGoldTiny,
+			UnrealItems.dustRedstoneTiny,                              UnrealItems.dustGlowstoneTiny,                  UnrealItems.dustNetherQuartzTiny,
+			UnrealItems.dustDiamondTiny,                               UnrealItems.dustEmeraldTiny,                    UnrealItems.dustObsidianTiny,
+			UnrealItems.dustLithiumTiny,                               UnrealItems.dustGunpowderTiny
+		},{
+			"dustTitanium",                                            "dustRutile",                                   "dustMagnesium",
+			"dustCinnabar",                                            "dustAsbestos",                                 "dustTarydiumAlloyUnrefined",
+			"dustTarydiumAlloyRefined",                                "dustCoal",                                     "dustCharcoal",
+			"dustIron",                                                "dustLapis",                                    "dustGold",
+			"dustRedstone",                                            "dustGlowstone",                                "dustNetherQuartz",
+			"dustDiamond",                                             "dustEmerald",                                  "dustObsidian",
+			"dustLithium",                                             "dustGunpowder"
+		}};
+		
+		for(int i=0;i<dustRecipes[0].length;i++)
+		{
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack((Item)dustRecipes[2][i],((Boolean)dustRecipes[0][i])?9:4), new Object[]{
+				"T",'T',dustRecipes[3][i],
 				}));
 			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustTitanium,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustTitaniumTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustTitaniumTiny,4), new Object[]{
-				"T",'T',"dustTitanium",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustTitanium,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustTitaniumTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerRutileDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustRutileTiny,9), new Object[]{
-				"T",'T',"dustRutile",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustRutile,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustRutileTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustRutileTiny,4), new Object[]{
-				"T",'T',"dustRutile",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustRutile,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustRutileTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerMagnesiumDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustMagnesiumTiny,9), new Object[]{
-				"T",'T',"dustMagnesium",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustMagnesium,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustMagnesiumTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustMagnesiumTiny,4), new Object[]{
-				"T",'T',"dustMagnesium",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustMagnesium,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustMagnesiumTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerCinnabarDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustCinnabarTiny,9), new Object[]{
-				"T",'T',"dustCinnabar",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustCinnabar,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustCinnabarTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustCinnabarTiny,4), new Object[]{
-				"T",'T',"dustCinnabar",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustCinnabar,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustCinnabarTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerAsbestosDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustAsbestosTiny,9), new Object[]{
-				"T",'T',"dustAsbestos",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustAsbestos,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustAsbestosTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustAsbestosTiny,4), new Object[]{
-				"T",'T',"dustAsbestos",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustAsbestos,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustAsbestosTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerTarydiumAlloyUnrefinedDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustTarydiumAlloyUnrefinedTiny,9), new Object[]{
-				"T",'T',"dustTarydiumAlloyUnrefined",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustTarydiumAlloyUnrefined,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustTarydiumAlloyUnrefinedTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustTarydiumAlloyUnrefinedTiny,4), new Object[]{
-				"T",'T',"dustTarydiumAlloyUnrefined",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustTarydiumAlloyUnrefined,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustTarydiumAlloyUnrefinedTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerTarydiumAlloyRefinedDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustTarydiumAlloyRefinedTiny,9), new Object[]{
-				"T",'T',"dustTarydiumAlloyRefined",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustTarydiumAlloyRefined,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustTarydiumAlloyRefinedTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustTarydiumAlloyRefinedTiny,4), new Object[]{
-				"T",'T',"dustTarydiumAlloyRefined",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustTarydiumAlloyRefined,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustTarydiumAlloyRefinedTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerCoalDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustCoalTiny,9), new Object[]{
-				"T",'T',"dustCoal",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustCoal,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustCoalTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustCoalTiny,4), new Object[]{
-				"T",'T',"dustCoal",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustCoal,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustCoalTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerCharcoalDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustCharcoalTiny,9), new Object[]{
-				"T",'T',"dustCharcoal",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustCharcoal,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustCharcoalTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustCharcoalTiny,4), new Object[]{
-				"T",'T',"dustCharcoal",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustCharcoal,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustCharcoalTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerIronDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustIronTiny,9), new Object[]{
-				"T",'T',"dustIron",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustIron,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustIronTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustIronTiny,4), new Object[]{
-				"T",'T',"dustIron",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustIron,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustIronTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerLapisDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustLapisTiny,9), new Object[]{
-				"T",'T',"dustLapis",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustLapis,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustLapisTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustLapisTiny,4), new Object[]{
-				"T",'T',"dustLapis",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustLapis,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustLapisTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerGoldDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustGoldTiny,9), new Object[]{
-				"T",'T',"dustGold",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustGold,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustGoldTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustGoldTiny,4), new Object[]{
-				"T",'T',"dustGold",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustGold,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustGoldTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerRedstoneDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustRedstoneTiny,9), new Object[]{
-				"T",'T',"dustRedstone",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.redstone,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustRedstoneTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustRedstoneTiny,4), new Object[]{
-				"T",'T',"dustRedstone",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.redstone,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustRedstoneTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerGlowstoneDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustGlowstoneTiny,9), new Object[]{
-				"T",'T',"dustGlowstone",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.glowstone_dust,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustGlowstoneTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustGlowstoneTiny,4), new Object[]{
-				"T",'T',"dustGlowstone",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.glowstone_dust,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustGlowstoneTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerNetherQuartzDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustNetherQuartzTiny,9), new Object[]{
-				"T",'T',"dustNetherQuartz",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustNetherQuartz,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustNetherQuartzTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustNetherQuartzTiny,4), new Object[]{
-				"T",'T',"dustNetherQuartz",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustNetherQuartz,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustNetherQuartzTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerDiamondDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustDiamondTiny,9), new Object[]{
-				"T",'T',"dustDiamond",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustDiamond,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustDiamondTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustDiamondTiny,4), new Object[]{
-				"T",'T',"dustDiamond",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustDiamond,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustDiamondTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerEmeraldDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustEmeraldTiny,9), new Object[]{
-				"T",'T',"dustEmerald",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustEmerald,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustEmeraldTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustEmeraldTiny,4), new Object[]{
-				"T",'T',"dustEmerald",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustEmerald,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustEmeraldTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerObsidianDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustObsidianTiny,9), new Object[]{
-				"T",'T',"dustObsidian",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustObsidian,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustObsidianTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustObsidianTiny,4), new Object[]{
-				"T",'T',"dustObsidian",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustObsidian,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustObsidianTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerLithiumDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustLithiumTiny,9), new Object[]{
-				"T",'T',"dustLithium",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustLithium,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustLithiumTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustLithiumTiny,4), new Object[]{
-				"T",'T',"dustLithium",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustLithium,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustLithiumTiny,
-				}));
-		}
-		if(Settings.Crafting.nineTinyDustPerGunpowderDust)
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustGunpowderTiny,9), new Object[]{
-				"T",'T',"dustGunpowder",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.gunpowder,1), new Object[]{
-				"TTT","TTT","TTT",'T',UnrealItems.dustGunpowderTiny,
-				}));
-		}
-		else
-		{
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.dustGunpowderTiny,4), new Object[]{
-				"T",'T',"dustGunpowder",
-				}));
-			
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.gunpowder,1), new Object[]{
-				"TT","TT",'T',UnrealItems.dustGunpowderTiny,
-				}));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack((Item)dustRecipes[1][i],1),((Boolean)dustRecipes[0][i])?
+			new Object[]{
+				"TTT","TTT","TTT",'T',dustRecipes[2][i],
+			}:
+			new Object[]{
+				"TT","TT",'T',dustRecipes[2][i],
+			}));
 		}
 		//end tiny dusts -----------------------------------------------------------------------------------------------------------------------------
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.axeTitanium,1), new Object[]{
@@ -1495,71 +1020,6 @@ public class UnrealRecipes
 			"UUU","UDU","UUU",'U',UnrealBlocks.blockUUTC,'D',"dyeRed",
 			}));
 		
-		//compressed start ---------------------------------------------------------------------------------------------------------------------------------
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.netherrackCompressed1x,1), new Object[]{
-			"TTT","TTT","TTT",'T',"netherrack",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.netherrack,9), new Object[]{
-			"T",'T',"compressedNetherrack1x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.netherrackCompressed2x,1), new Object[]{
-			"TTT","TTT","TTT",'T',"compressedNetherrack1x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.netherrackCompressed1x,9), new Object[]{
-			"T",'T',"compressedNetherrack2x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.netherrackCompressed3x,1), new Object[]{
-			"TTT","TTT","TTT",'T',"compressedNetherrack2x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.netherrackCompressed2x,9), new Object[]{
-			"T",'T',"compressedNetherrack3x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.netherrackCompressed4x,1), new Object[]{
-			"TTT","TTT","TTT",'T',"compressedNetherrack3x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.netherrackCompressed3x,9), new Object[]{
-			"T",'T',"compressedNetherrack4x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.endStoneCompressed1x,1), new Object[]{
-			"TTT","TTT","TTT",'T',Blocks.end_stone,
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.end_stone,9), new Object[]{
-			"T",'T',"compressedEndStone1x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.endStoneCompressed2x,1), new Object[]{
-			"TTT","TTT","TTT",'T',"compressedEndStone1x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.endStoneCompressed1x,9), new Object[]{
-			"T",'T',"compressedEndStone2x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.endStoneCompressed3x,1), new Object[]{
-			"TTT","TTT","TTT",'T',"compressedEndStone2x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.endStoneCompressed2x,9), new Object[]{
-			"T",'T',"compressedEndStone3x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.endStoneCompressed4x,1), new Object[]{
-			"TTT","TTT","TTT",'T',"compressedEndStone3x",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.endStoneCompressed3x,9), new Object[]{
-			"T",'T',"compressedEndStone4x",
-			}));
-		//compressed end ---------------------------------------------------------------------------------------------------------------------------------
 		//slabs start -------------------------------------------------------------------------------------------------------------------------------------
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.stonePolished,1), new Object[]{
 			"S","B","S",'S',new ItemStack(Blocks.stone_slab,1,0),'B',"slimeball",
