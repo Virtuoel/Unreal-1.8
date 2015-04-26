@@ -846,13 +846,13 @@ public class UnrealItems
 				new ItemDustUnreal()
 				.setUnlocalizedName(Names.Items.DUST_TARYDIUM_ALLOY_UNREFINED_TINY)
 				.setMaxStackSize(64)
-				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
+				.setCreativeTab(null);
 		
 		dustTarydiumAlloyRefinedTiny = 
 				new ItemDustUnreal()
 				.setUnlocalizedName(Names.Items.DUST_TARYDIUM_ALLOY_REFINED_TINY)
 				.setMaxStackSize(64)
-				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
+				.setCreativeTab(null);
 		
 		dustCoalTiny = 
 				new ItemDustUnreal()
