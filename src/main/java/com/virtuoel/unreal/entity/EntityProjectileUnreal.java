@@ -63,6 +63,7 @@ public class EntityProjectileUnreal extends Entity implements IProjectile
     {
         super(worldIn);
         this.renderDistanceWeight = 10.0D;
+        this.setSize(0.5F, 0.5F);
         this.shootingEntity = shooter;
 
         if (shooter instanceof EntityPlayer)
@@ -92,6 +93,7 @@ public class EntityProjectileUnreal extends Entity implements IProjectile
     {
         super(worldIn);
         this.renderDistanceWeight = 10.0D;
+        this.setSize(0.5F, 0.5F);
         this.shootingEntity = shooter;
 
         if (shooter instanceof EntityPlayer)

@@ -377,7 +377,7 @@ public class EntityTranslocatorDisc extends EntityProjectileUnreal
         if (!teleported && 
         		/*(*/this.shootingEntity != null && 
         		//this.shootingEntity.getUniqueID().equals(entityIn.getUniqueID())) && 
-        		(this.worldObj.isRemote && 
+        		(!this.worldObj.isRemote && 
         				this.inGround && 
         				this.arrowShake <= 0))
         {
@@ -390,7 +390,7 @@ public class EntityTranslocatorDisc extends EntityProjectileUnreal
             
             if (flag)
             {
-                this.playSound(Reference.MOD_ID + ":item.ammopick", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+                this.playSound(Reference.MOD_ID + ":item.ammoPickup", 0.3F, 1.0F);
                 entityIn.onItemPickup(this, 1);
                 this.setDead();
             }
