@@ -2,6 +2,7 @@ package com.virtuoel.unreal.init;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
@@ -360,6 +361,26 @@ public class UnrealRecipes
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.diamond,2), new Object[]{
 			Blocks.enchanting_table,"virtuoel.unreal.debug",
 			}));
+
+		int dustsPerArmorPiece[] = {5, 8, 7, 4};
+		int dustMultipliers[] = {1, 1, 5, 1};
+		Item dustItems[] = {UnrealItems.dustIron, UnrealItems.dustGold, UnrealItems.dustIronTiny, UnrealItems.dustTitanium};
+		Item armorItems[][] = {
+				{Items.iron_helmet,Items.iron_chestplate,Items.iron_leggings,Items.iron_boots},
+				{Items.golden_helmet,Items.golden_chestplate,Items.golden_leggings,Items.golden_boots},
+				{Items.chainmail_helmet,Items.chainmail_chestplate,Items.chainmail_leggings,Items.chainmail_boots},
+				{UnrealItems.armorHelmetTitanium,UnrealItems.armorChestplateTitanium,UnrealItems.armorLeggingsTitanium,UnrealItems.armorBootsTitanium}
+				};
+		
+		for(int i=0;i<4;i++)
+		{
+			for(int j=0;j<4;j++)
+			{
+				GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(dustItems[i],dustsPerArmorPiece[j]*dustMultipliers[i]), new Object[]{
+					new ItemStack(armorItems[i][j],1,0),"virtuoel.unreal.debug",
+					}));
+			}
+		}
 		
 		//refining
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.crystalCinnabar,1), new Object[]{
