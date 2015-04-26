@@ -38,7 +38,7 @@ public class Materials
 				.addArmorMaterial(Reference.Armor.Material.Name.SLIME, Reference.Armor.Texture.SLIME, 6, new int[] {1, 1, 1, 1}, 12);
 		
 		public static ItemArmor.ArmorMaterial TITANIUM = EnumHelper
-				.addArmorMaterial(Reference.Armor.Material.Name.TITANIUM, Reference.Armor.Texture.TITANIUM, 18, new int[] {4, 6, 5, 3}, 9);
+				.addArmorMaterial(Reference.Armor.Material.Name.TITANIUM, Reference.Armor.Texture.TITANIUM, 22, new int[] {4, 6, 5, 3}, 9);
 	}
 	
 }

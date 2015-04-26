@@ -66,6 +66,8 @@ Changelog:
 [Addition] Black Slimeball and Slime Block
 [Addition] Config option for cheaper Health Buckets
 [Bugfix] Toxin Suit not being destroyed fixed
+[Change] Buffed Titanium armor durability
+[Addition] Gave some wooden items from vanilla burn times in furnace
 
 0.2.0.12
 ---
