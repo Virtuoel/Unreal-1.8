@@ -1,6 +1,6 @@
 Versions:
 
-Current: 0.2.0.13
+Current: 0.2.0.14
 
 Features:(A Lot Currently NYI)
 
@@ -58,8 +58,14 @@ Syntax List
 -Material names to reference file
 -updateItemStackNBT(NBTTagCompound tag) for weapons
 -Shield Belt model
+-Translator model
 
 Changelog:
+
+0.2.0.14
+---
+[Addition] Metal armors can be ground into their respective dusts
+[Change] Tweaks to Translocator Disc
 
 0.2.0.13
 ---
