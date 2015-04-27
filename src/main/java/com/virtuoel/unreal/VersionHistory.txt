@@ -1,11 +1,11 @@
 Versions:
 
-Current: 0.2.0.14
+Current: 0.2.0.15
 
 Features:(A Lot Currently NYI)
 
 Weapons:
-Translocator
+Translocator ,/
 Chainsaw
 Dispersion Pistol
 Stinger
@@ -15,7 +15,7 @@ Redeemer
 
 Armor:
 Shield Belt
-Jump Boots
+Jump Boots ,/
 SCUBA Gear
 Asbestos Suit
 Toxin Suit
@@ -24,10 +24,10 @@ Tools:
 Noise Box
 
 WorldGen:
-Rutile Ore
-Magnesium Ore
-Tarydium Ore
-Asbestos Ore
+Rutile Ore ,/
+Magnesium Ore ,/
+Tarydium Ore ,/
+Asbestos Ore ,/
 
 Inspired by mods: Extra Utilities, Mariculture, IC2, Tinker's Construct, and more!
 
@@ -59,8 +59,13 @@ Syntax List
 -updateItemStackNBT(NBTTagCompound tag) for weapons
 -Shield Belt model
 -Translator model
+-Translocator model
 
 Changelog:
+
+0.2.0.15
+---
+[Addition] Translocator fully implemented
 
 0.2.0.14
 ---

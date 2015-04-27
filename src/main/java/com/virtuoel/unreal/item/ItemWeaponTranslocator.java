@@ -7,6 +7,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
@@ -63,6 +64,22 @@ public class ItemWeaponTranslocator extends ItemWeaponBase
 				NBTHelper.setLong(stack, "discUUIDMost", 0);
 		}
 		return true;
+	}
+	
+	@Override
+	public boolean onEntityItemUpdate(EntityItem entityItem)
+	{
+		ItemStack stack = entityItem.getEntityItem();
+		EntityTranslocatorDisc disc = getDisc(stack);
+		if(disc != null)
+		{
+			entityItem.worldObj.playSoundAtEntity(entityItem, Reference.MOD_ID + ":weapons.gunTranslocator.recall", 0.3F, 1.0F);
+			disc.setDead();
+		}
+		NBTHelper.setLong(stack, "discUUIDLeast", 0);
+		NBTHelper.setLong(stack, "discUUIDMost", 0);
+		stack.setItemDamage(1);
+		return false;
 	}
 	
 	@Override

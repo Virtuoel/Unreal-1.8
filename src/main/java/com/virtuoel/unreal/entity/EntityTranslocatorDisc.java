@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.virtuoel.unreal.init.UnrealItems;
 import com.virtuoel.unreal.reference.Reference;
+import com.virtuoel.unreal.utility.NBTHelper;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -374,25 +375,39 @@ public class EntityTranslocatorDisc extends EntityProjectileUnreal
     
     public void onCollideWithPlayer(EntityPlayer entityIn)
     {
-        if (!teleported && 
-        		!entityIn.isSneaking() &&
-        		/*(*/this.shootingEntity != null && 
-        		//this.shootingEntity.getUniqueID().equals(entityIn.getUniqueID())) && 
-        		(!this.worldObj.isRemote && 
-        				this.inGround && 
-        				this.arrowShake <= 0))
+        if (!teleported && !entityIn.isSneaking() && this.shootingEntity != null && 
+        	!this.worldObj.isRemote && this.inGround && this.ticksExisted > 35)
         {
-            boolean flag = this.canBePickedUp == 1 || (this.canBePickedUp == 2 && entityIn.capabilities.isCreativeMode);
+            ItemStack stack = new ItemStack(UnrealItems.gunTranslocator,1,100);
+            NBTHelper.setLong(stack, "discUUIDLeast", this.getUniqueID().getLeastSignificantBits());
+    		NBTHelper.setLong(stack, "discUUIDMost", this.getUniqueID().getMostSignificantBits());
             
-            if (this.canBePickedUp == 1 && !entityIn.inventory.addItemStackToInventory(new ItemStack(UnrealItems.translocatorDisc, 1)))
-            {
-                flag = false;
-            }
+            boolean flag = this.canBePickedUp == 1 && entityIn.inventory.hasItemStack(stack) && entityIn.inventory.getFirstEmptyStack()!=-1 || entityIn.capabilities.isCreativeMode;
             
             if (flag)
             {
+                NBTHelper.setLong(stack, "discUUIDLeast", 0);
+        		NBTHelper.setLong(stack, "discUUIDMost", 0);
+        		stack.setItemDamage(1);
+        		boolean found=false;
+        		int index = 0;
+        		for(index = 0; index < entityIn.inventory.mainInventory.length; index++)
+        		{
+        			if( entityIn.inventory.mainInventory[index]!=null &&
+        				entityIn.inventory.mainInventory[index].hasTagCompound() && 
+            			entityIn.inventory.mainInventory[index].getTagCompound().getLong("discUUIDLeast")==this.getUniqueID().getLeastSignificantBits() && 
+                    	entityIn.inventory.mainInventory[index].getTagCompound().getLong("discUUIDMost") ==this.getUniqueID().getMostSignificantBits())
+        			{
+        				found=true;
+        				break;
+        			}
+        		}
                 this.playSound(Reference.MOD_ID + ":item.ammoPickup", 0.3F, 1.0F);
                 entityIn.onItemPickup(this, 1);
+            	if(found)
+            	{
+                	entityIn.inventory.setInventorySlotContents(index, stack);
+                }
                 this.setDead();
             }
         }
