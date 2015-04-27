@@ -68,6 +68,7 @@ Changelog:
 [Addition] Translocator fully implemented
 [Change] Buff to Slime armor
 [Change] Tweak to Force Field
+[Addition] Metal tools can be ground into their respective dusts
 
 0.2.0.14
 ---

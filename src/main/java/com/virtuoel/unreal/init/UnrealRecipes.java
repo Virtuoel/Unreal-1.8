@@ -363,23 +363,25 @@ public class UnrealRecipes
 			Blocks.enchanting_table,"virtuoel.unreal.debug",
 			}));
 
-		int dustsPerArmorPiece[] = {5, 8, 7, 4};
+		int dustsPerArmorPiece[] = {5, 8, 7, 4, 2, 3, 1, 3, 2};
 		int dustMultipliers[] = {1, 1, 5, 1};
 		Item dustItems[] = {UnrealItems.dustIron, UnrealItems.dustGold, UnrealItems.dustIronTiny, UnrealItems.dustTitanium};
 		Item armorItems[][] = {
-				{Items.iron_helmet,Items.iron_chestplate,Items.iron_leggings,Items.iron_boots},
-				{Items.golden_helmet,Items.golden_chestplate,Items.golden_leggings,Items.golden_boots},
-				{Items.chainmail_helmet,Items.chainmail_chestplate,Items.chainmail_leggings,Items.chainmail_boots},
-				{UnrealItems.armorHelmetTitanium,UnrealItems.armorChestplateTitanium,UnrealItems.armorLeggingsTitanium,UnrealItems.armorBootsTitanium}
-				};
+			{Items.iron_helmet,Items.iron_chestplate,Items.iron_leggings,Items.iron_boots,Items.iron_sword,Items.iron_pickaxe,Items.iron_shovel,Items.iron_axe,Items.iron_hoe},
+			{Items.golden_helmet,Items.golden_chestplate,Items.golden_leggings,Items.golden_boots,Items.golden_sword,Items.golden_pickaxe,Items.golden_shovel,Items.golden_axe,Items.golden_hoe},
+			{Items.chainmail_helmet,Items.chainmail_chestplate,Items.chainmail_leggings,Items.chainmail_boots,null,null,null,null,null},
+			{UnrealItems.armorHelmetTitanium,UnrealItems.armorChestplateTitanium,UnrealItems.armorLeggingsTitanium,UnrealItems.armorBootsTitanium,UnrealItems.swordTitanium,UnrealItems.pickaxeTitanium,UnrealItems.shovelTitanium,UnrealItems.axeTitanium,UnrealItems.hoeTitanium}
+			};
 		
-		for(int i=0;i<4;i++)
+		for(int i=0;i<armorItems.length;i++)
 		{
-			for(int j=0;j<4;j++)
+			for(int j=0;j<armorItems[0].length;j++)
 			{
-				GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(dustItems[i],dustsPerArmorPiece[j]*dustMultipliers[i]), new Object[]{
-					new ItemStack(armorItems[i][j],1,0),"virtuoel.unreal.debug",
-					}));
+				if(armorItems[i][j]!=null){
+					GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(dustItems[i],dustsPerArmorPiece[j]*dustMultipliers[i]), new Object[]{
+						new ItemStack(armorItems[i][j],1,0),"virtuoel.unreal.debug",
+						}));
+				}
 			}
 		}
 		
