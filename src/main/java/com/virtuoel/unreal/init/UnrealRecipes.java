@@ -383,6 +383,10 @@ public class UnrealRecipes
 			}
 		}
 		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustEmeraldTiny,16), new Object[]{
+			UnrealItems.invisibility,"virtuoel.unreal.debug",
+			}));
+		
 		//refining
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.crystalCinnabar,1), new Object[]{
 			"oreRedstone","oreRedstone","oreRedstone","oreRedstone","virtuoel.unreal.debug",

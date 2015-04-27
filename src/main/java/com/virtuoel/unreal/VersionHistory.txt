@@ -66,6 +66,8 @@ Changelog:
 0.2.0.15
 ---
 [Addition] Translocator fully implemented
+[Change] Buff to Slime armor
+[Change] Tweak to Force Field
 
 0.2.0.14
 ---
