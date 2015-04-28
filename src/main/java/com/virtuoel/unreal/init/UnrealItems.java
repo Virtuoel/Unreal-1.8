@@ -1,14 +1,11 @@
 package com.virtuoel.unreal.init;
 
-import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.registry.ExistingSubstitutionException;
-import net.minecraftforge.fml.common.registry.GameData;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.virtuoel.unreal.creativetab.CreativeTabUnreal;
@@ -20,8 +17,8 @@ import com.virtuoel.unreal.item.ItemArmorSlime;
 import com.virtuoel.unreal.item.ItemArmorToxinSuit;
 import com.virtuoel.unreal.item.ItemArmorUnrealBase;
 import com.virtuoel.unreal.item.ItemAxeUnreal;
-import com.virtuoel.unreal.item.ItemBlockPlacer;
 import com.virtuoel.unreal.item.ItemDustUnreal;
+import com.virtuoel.unreal.item.ItemFoodUnreal;
 import com.virtuoel.unreal.item.ItemForceField;
 import com.virtuoel.unreal.item.ItemHoeUnreal;
 import com.virtuoel.unreal.item.ItemPickaxeUnreal;
@@ -98,6 +95,12 @@ public class UnrealItems
 	public static Item lensTarydium;
 	public static Item coreInvulnerability;
 	public static Item slimeballBlack;
+	
+	//food
+	public static Item appleCompressed1x;
+	public static Item appleCompressed2x;
+	public static Item appleCompressed3x;
+	public static Item appleCompressed4x;
 	
 	//fluid containers
 	public static Item bucketMercury;
@@ -530,6 +533,31 @@ public class UnrealItems
 		slimeballBlack = 
 				new ItemUnreal()
 				.setUnlocalizedName(Names.Items.SLIMEBALL_BLACK)
+				.setMaxStackSize(64)
+				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
+		
+		//food
+		appleCompressed1x = 
+				new ItemFoodUnreal(5, 0.6F, false, 32+(8*1))
+				.setUnlocalizedName(Names.Items.APPLE_COMPRESSED_1X)
+				.setMaxStackSize(64)
+				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
+		
+		appleCompressed2x = 
+				new ItemFoodUnreal(6, 0.9F, false, 32+(8*2))
+				.setUnlocalizedName(Names.Items.APPLE_COMPRESSED_2X)
+				.setMaxStackSize(64)
+				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
+		
+		appleCompressed3x = 
+				new ItemFoodUnreal(7, 1.2F, false, 32+(8*3))
+				.setUnlocalizedName(Names.Items.APPLE_COMPRESSED_3X)
+				.setMaxStackSize(64)
+				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
+		
+		appleCompressed4x = 
+				new ItemFoodUnreal(8, 1.5F, false, 32+(8*4))
+				.setUnlocalizedName(Names.Items.APPLE_COMPRESSED_4X)
 				.setMaxStackSize(64)
 				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
 		
@@ -1065,6 +1093,12 @@ public class UnrealItems
 		GameRegistry.registerItem(coreInvulnerability, Names.Items.CORE_INVULNERABILITY);
 		GameRegistry.registerItem(slimeballBlack, Names.Items.SLIMEBALL_BLACK);
 		
+		//food
+		GameRegistry.registerItem(appleCompressed1x, Names.Items.APPLE_COMPRESSED_1X);
+		GameRegistry.registerItem(appleCompressed2x, Names.Items.APPLE_COMPRESSED_2X);
+		GameRegistry.registerItem(appleCompressed3x, Names.Items.APPLE_COMPRESSED_3X);
+		GameRegistry.registerItem(appleCompressed4x, Names.Items.APPLE_COMPRESSED_4X);
+		
 		//fluid containers
 		GameRegistry.registerItem(bucketMercury, Names.Items.BUCKET_MERCURY);
 		GameRegistry.registerItem(bucketTarydiumSludge, Names.Items.BUCKET_TARYDIUM_SLUDGE);
@@ -1226,6 +1260,12 @@ public class UnrealItems
 		registerRender(bucketTarydiumSludge);
 		registerRender(bucketHealth);
 		registerRender(bucketNanoblack);
+		
+		//food
+		registerRender(appleCompressed1x);
+		registerRender(appleCompressed2x);
+		registerRender(appleCompressed3x);
+		registerRender(appleCompressed4x);
 		
 		//tools
 		registerRender(debugTool);

@@ -140,6 +140,12 @@ public final class Names
 		public static final String CORE_INVULNERABILITY = "coreInvulnerability";
 		public static final String SLIMEBALL_BLACK = "slimeballBlack";
 		
+		//foods
+		public static final String APPLE_COMPRESSED_1X = "appleCompressed1x";
+		public static final String APPLE_COMPRESSED_2X = "appleCompressed2x";
+		public static final String APPLE_COMPRESSED_3X = "appleCompressed3x";
+		public static final String APPLE_COMPRESSED_4X = "appleCompressed4x";
+		
 		//fluid containers
 		public static final String BUCKET_MERCURY = "bucketMercury";
 		public static final String BUCKET_TARYDIUM_SLUDGE = "bucketTarydiumSludge";

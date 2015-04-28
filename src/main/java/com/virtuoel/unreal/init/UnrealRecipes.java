@@ -620,6 +620,7 @@ public class UnrealRecipes
 			UnrealBlocks.blockLithium,                UnrealItems.ingotLithium,                 UnrealBlocks.blockInk,                   UnrealBlocks.blockSlimeBlack,
 			UnrealBlocks.netherrackCompressed1x,      UnrealBlocks.netherrackCompressed2x,      UnrealBlocks.netherrackCompressed3x,     UnrealBlocks.netherrackCompressed4x,
 			UnrealBlocks.endStoneCompressed1x,        UnrealBlocks.endStoneCompressed2x,        UnrealBlocks.endStoneCompressed3x,       UnrealBlocks.endStoneCompressed4x,
+			UnrealItems.appleCompressed1x,            UnrealItems.appleCompressed2x,            UnrealItems.appleCompressed3x,           UnrealItems.appleCompressed4x
 		},{//1: 9 crafted from 1 of this
 			"blockTitanium",                          "ingotTitanium",                          "blockRutile",                           "ingotRutile",
 			"blockMagnesium",                         "ingotMagnesium",                         "blockTarydiumAlloyRefined",             "ingotTarydiumAlloyRefined",
@@ -630,6 +631,7 @@ public class UnrealRecipes
 			"blockLithium",                           "ingotLithium",                           "blockInk",                              "blockSlimeBlack",
 			"compressedNetherrack1x",                 "compressedNetherrack2x",                 "compressedNetherrack3x",                "compressedNetherrack4x",
 			"compressedEndStone1x",                   "compressedEndStone2x",                   "compressedEndStone3x",                  "compressedEndStone4x",
+			"compressedApple1x",                      "compressedApple2x",                      "compressedApple3x",                     "compressedApple4x"
 		},{//2: 1 crafted into 9 of this
 			UnrealItems.ingotTitanium,                UnrealItems.nuggetTitanium,               UnrealItems.ingotRutile,                 UnrealItems.nuggetRutile,
 			UnrealItems.ingotMagnesium,               UnrealItems.nuggetMagnesium,              UnrealItems.ingotTarydiumAlloyRefined,   UnrealItems.nuggetTarydiumAlloyRefined,
@@ -640,6 +642,7 @@ public class UnrealRecipes
 			UnrealItems.ingotLithium,                 UnrealItems.nuggetLithium,                Items.dye,                               UnrealItems.slimeballBlack,
 			Blocks.netherrack,                        UnrealBlocks.netherrackCompressed1x,      UnrealBlocks.netherrackCompressed2x,     UnrealBlocks.netherrackCompressed3x,
 			Blocks.end_stone,                         UnrealBlocks.endStoneCompressed1x,        UnrealBlocks.endStoneCompressed2x,       UnrealBlocks.endStoneCompressed3x,
+			Items.apple,                              UnrealItems.appleCompressed1x,            UnrealItems.appleCompressed2x,           UnrealItems.appleCompressed3x
 		},{//3: 1 crafted from 9 of this
 			"ingotTitanium",                          "nuggetTitanium",                         "ingotRutile",                          "nuggetRutile",
 			"ingotMagnesium",                         "nuggetMagnesium",                        "ingotTarydiumAlloyRefined",            "nuggetTarydiumAlloyRefined",
@@ -650,6 +653,7 @@ public class UnrealRecipes
 			"ingotLithium",                           "nuggetLithium",                          "itemInkSac",                           "slimeballBlack",
 			"netherrack",                             "compressedNetherrack1x",                 "compressedNetherrack2x",               "compressedNetherrack3x",
 			Blocks.end_stone,                         "compressedEndStone1x",                   "compressedEndStone2x",                 "compressedEndStone3x",
+			"cropApple",                              "compressedApple1x",                      "compressedApple2x",                    "compressedApple3x"
 		},{//4: component damage
 			0,0,0,0,
 			0,0,0,0,
@@ -657,6 +661,7 @@ public class UnrealRecipes
 			0,0,0,0,
 			0,0,0,1,
 			0,0,0,3,
+			0,0,0,0,
 			0,0,0,0,
 			0,0,0,0,
 			0,0,0,0
@@ -669,7 +674,8 @@ public class UnrealRecipes
 			false, true,  false, false,
 			false, true,  false, false,
 			false, false, false, false,
-			false, false, false, false
+			false, false, false, false,
+			true, true,  true, true
 		},{//6: crafts from items instead of blocks
 			true,  true,  true,  true,
 			true,  true,  true,  true,
@@ -679,8 +685,10 @@ public class UnrealRecipes
 			true,  true,  true,  true,
 			true,  true,  true,  true,
 			false, false, false, false,
-			false, false, false, false
+			false, false, false, false,
+			true,  true,  true,  true
 		},{//7: crafted from this many materials
+			9,9,9,9,
 			9,9,9,9,
 			9,9,9,9,
 			9,9,9,9,
@@ -1369,6 +1377,10 @@ public class UnrealRecipes
 			"EGE","FPF","MTM",'E',"dustEmerald",'G',"blockGlassLime",'F',UnrealBlocks.blockMachineFrameBasic,'T',new ItemStack(UnrealItems.tarydPowerBasic,1,OreDictionary.WILDCARD_VALUE),'M',"blockMagnesium",'P',new ItemStack(Items.potionitem,1,8270),
 			}));
 		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.golden_apple,9,0), new Object[]{
+			"GGG","GAG","GGG",'G',"blockGold",'A',"compressedApple1x",
+			}));
+		
 	}
 	
 	public static void initSmelting()
@@ -1521,6 +1533,10 @@ public class UnrealRecipes
 		OreDictionary.registerOre("compressedEndStone2x", UnrealBlocks.endStoneCompressed2x);
 		OreDictionary.registerOre("compressedEndStone3x", UnrealBlocks.endStoneCompressed3x);
 		OreDictionary.registerOre("compressedEndStone4x", UnrealBlocks.endStoneCompressed4x);
+		OreDictionary.registerOre("compressedApple1x", UnrealItems.appleCompressed1x);
+		OreDictionary.registerOre("compressedApple2x", UnrealItems.appleCompressed2x);
+		OreDictionary.registerOre("compressedApple3x", UnrealItems.appleCompressed3x);
+		OreDictionary.registerOre("compressedApple4x", UnrealItems.appleCompressed4x);
 		OreDictionary.registerOre("blockTarydiumAlloyRefined", UnrealBlocks.blockTarydiumAlloyRefined);
 		OreDictionary.registerOre("blockTarydiumAlloyUnrefined", UnrealBlocks.blockTarydiumAlloyUnrefined);
 		OreDictionary.registerOre("ingotTarydiumAlloyRefined", UnrealItems.ingotTarydiumAlloyRefined);

@@ -1,6 +1,6 @@
 Versions:
 
-Current: 0.2.0.15
+Current: 0.2.0.16
 
 Features:(A Lot Currently NYI)
 
@@ -62,6 +62,10 @@ Syntax List
 -Translocator model
 
 Changelog:
+
+0.2.0.16
+---
+[Addition] Compresed Apples
 
 0.2.0.15
 ---

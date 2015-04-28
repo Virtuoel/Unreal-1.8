@@ -88,6 +88,11 @@ item.unreal:rodGold.name=Gold Rod
 item.unreal:lensTarydium.name=Tarydium Field Focus Lens
 item.unreal:coreInvulnerability.name=Modulated Nanoblack Shielding Core
 item.unreal:slimeballBlack.name=Black Slimeball
+# (Food)
+item.unreal:appleCompressed1x.name=Compressed Apple
+item.unreal:appleCompressed2x.name=Double Compressed Apple
+item.unreal:appleCompressed3x.name=Triple Compressed Apple
+item.unreal:appleCompressed4x.name=Quadruple Compressed Apple
 # (Fluid Containers)
 item.unreal:bucketMercury.name=Mercury Bucket
 item.unreal:bucketTarydiumSludge.name=Tarydium Sludge Bucket
