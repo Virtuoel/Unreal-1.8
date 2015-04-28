@@ -363,7 +363,7 @@ public class UnrealRecipes
 			Blocks.enchanting_table,"virtuoel.unreal.debug",
 			}));
 
-		int dustsPerArmorPiece[] = {5, 8, 7, 4, 2, 3, 1, 3, 2};
+		int dustsPerPiece[] = {5, 8, 7, 4, 2, 3, 1, 3, 2};
 		int dustMultipliers[] = {1, 1, 5, 1};
 		Item dustItems[] = {UnrealItems.dustIron, UnrealItems.dustGold, UnrealItems.dustIronTiny, UnrealItems.dustTitanium};
 		Item armorItems[][] = {
@@ -375,10 +375,10 @@ public class UnrealRecipes
 		
 		for(int i=0;i<armorItems.length;i++)
 		{
-			for(int j=0;j<armorItems[0].length;j++)
+			for(int j=0;j<armorItems[i].length;j++)
 			{
 				if(armorItems[i][j]!=null){
-					GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(dustItems[i],dustsPerArmorPiece[j]*dustMultipliers[i]), new Object[]{
+					GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(dustItems[i],dustsPerPiece[j]*dustMultipliers[i]), new Object[]{
 						new ItemStack(armorItems[i][j],1,0),"virtuoel.unreal.debug",
 						}));
 				}
@@ -589,7 +589,7 @@ public class UnrealRecipes
 			"ingotBedrockium",                        "nuggetBedrockium",                       "crystalCinnabar",                      "cropCocoa",
 			"ingotLithium",                           "nuggetLithium",                          "itemInkSac",                           "slimeballBlack",
 			"netherrack",                             "compressedNetherrack1x",                 "compressedNetherrack2x",               "compressedNetherrack3x",
-			"endStone",                               "compressedEndStone1x",                   "compressedEndStone2x",                 "compressedEndStone3x",
+			Blocks.end_stone,                         "compressedEndStone1x",                   "compressedEndStone2x",                 "compressedEndStone3x",
 		},{//4: component damage
 			0,0,0,0,
 			0,0,0,0,
