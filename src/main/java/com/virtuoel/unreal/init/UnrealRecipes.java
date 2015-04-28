@@ -389,6 +389,66 @@ public class UnrealRecipes
 			UnrealItems.invisibility,"virtuoel.unreal.debug",
 			}));
 		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustIron,2), new Object[]{
+			Items.iron_door,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustIron,4), new Object[]{
+			Blocks.iron_trapdoor,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustIron,5), new Object[]{
+			Items.minecart,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustIron,4), new Object[]{
+			Items.compass,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustIron,1), new Object[]{
+			Blocks.activator_rail,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustIron,1), new Object[]{
+			Blocks.rail,Blocks.rail,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustIron,2), new Object[]{
+			Blocks.heavy_weighted_pressure_plate,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustIronTiny,4), new Object[]{
+			Blocks.tripwire_hook,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustGoldTiny,8), new Object[]{
+			Items.golden_carrot,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustGoldTiny,8), new Object[]{
+			Items.speckled_melon,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustGold,4), new Object[]{
+			Items.clock,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustGold,1), new Object[]{
+			Blocks.golden_rail,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustGold,2), new Object[]{
+			Blocks.light_weighted_pressure_plate,"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustGold,8), new Object[]{
+			new ItemStack(Items.golden_apple,1,0),"virtuoel.unreal.debug",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustGold,64), new Object[]{
+			new ItemStack(Items.golden_apple,1,1),"virtuoel.unreal.debug",
+			}));
+		
 		//refining
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.crystalCinnabar,1), new Object[]{
 			"oreRedstone","oreRedstone","oreRedstone","oreRedstone","virtuoel.unreal.debug",
