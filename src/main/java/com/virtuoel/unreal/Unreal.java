@@ -130,6 +130,7 @@ public class Unreal
 		else
 		{
 			LogHelper.info("Block Break Event Handler Disabled.");
+			LogHelper.info("Entities Cleared.");
 			LogHelper.info("Renders Disabled.");
 			LogHelper.info("World Generation Disabled.");
 			LogHelper.info("Fuel Handler Disabled.");

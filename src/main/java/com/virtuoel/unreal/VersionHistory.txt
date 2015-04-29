@@ -66,6 +66,7 @@ Changelog:
 0.2.0.16
 ---
 [Addition] Compresed Apples
+[Change] Translocator rendering tweaks
 
 0.2.0.15
 ---

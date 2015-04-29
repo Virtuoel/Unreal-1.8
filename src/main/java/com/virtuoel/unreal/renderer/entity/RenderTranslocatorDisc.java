@@ -1,21 +1,22 @@
 package com.virtuoel.unreal.renderer.entity;
 
 import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.model.ModelBoat;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 
+import com.virtuoel.unreal.client.model.ModelTranslocatorDisc;
 import com.virtuoel.unreal.entity.EntityTranslocatorDisc;
 import com.virtuoel.unreal.reference.Reference;
 
 public class RenderTranslocatorDisc extends Render
 {
     private static final ResourceLocation entityTextures = new ResourceLocation(Reference.MOD_NAME, "textures/entity/translocator.png");
-    protected ModelBase modelTranslocator = new ModelBoat();
+    protected ModelBase modelTranslocator = new ModelTranslocatorDisc();
     
 	public RenderTranslocatorDisc(RenderManager renderManager)
 	{
@@ -69,5 +70,11 @@ public class RenderTranslocatorDisc extends Render
 	{
 		return entityTextures;
 	}
+	
+	@Override
+	public void doRender(Entity entity, double x, double y, double z, float p_76986_8_, float partialTicks)
+    {
+        this.doRender((EntityTranslocatorDisc)entity, x, y, z, p_76986_8_, partialTicks);
+    }
 	
 }
