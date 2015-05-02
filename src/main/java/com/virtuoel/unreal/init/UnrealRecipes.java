@@ -449,6 +449,10 @@ public class UnrealRecipes
 			new ItemStack(Items.golden_apple,1,1),"virtuoel.unreal.debug",
 			}));
 		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustIron,3), new Object[]{
+			Blocks.iron_bars,Blocks.iron_bars,Blocks.iron_bars,"virtuoel.unreal.debug",Blocks.iron_bars,Blocks.iron_bars,Blocks.iron_bars,Blocks.iron_bars,
+			}));
+		
 		//refining
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.crystalCinnabar,1), new Object[]{
 			"oreRedstone","oreRedstone","oreRedstone","oreRedstone","virtuoel.unreal.debug",
