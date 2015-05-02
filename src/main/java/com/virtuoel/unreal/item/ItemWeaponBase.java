@@ -20,37 +20,27 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.virtuoel.unreal.creativetab.CreativeTabUnreal;
 import com.virtuoel.unreal.init.UnrealItems;
-import com.virtuoel.unreal.reference.DamageSources;
 import com.virtuoel.unreal.reference.Reference;
 import com.virtuoel.unreal.utility.NBTHelper;
 
-public class ItemWeaponBase extends ItemUnreal
+public class ItemWeaponBase extends ItemUnrealRechargeable
 {
-	private ItemStack ammo;
 	private int meleeDamageAmount = 0;
 	private final int shotDelay;
-	private int damageOnCraft = 1;
 	
-	public ItemWeaponBase(ItemStack weaponAmmo, int damage, int delay)
+	public ItemWeaponBase(ItemStack weaponAmmo, int damage, int delay, int damagePerShot)
 	{
-		super();
+		super(weaponAmmo, damagePerShot);
 		shotDelay = delay;
-		setAmmoItem(weaponAmmo)
-		.setMaxDamage(damage)
+		this.setMaxDamage(damage)
 		.setNoRepair().setFull3D()
 		.setMaxStackSize(1).setHasSubtypes(true)
 		.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
 	}
 	
-	public Item setDamageOnCraft(int dmg)
+	public ItemWeaponBase(ItemStack weaponAmmo, int damage, int delay)
 	{
-		this.damageOnCraft = dmg;
-		return this;
-	}
-	
-	public int getDamageOnCraft()
-	{
-		return damageOnCraft;
+		this(weaponAmmo, damage, delay, 1);
 	}
 	
 	@Override
@@ -99,14 +89,13 @@ public class ItemWeaponBase extends ItemUnreal
 	@Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityPlayer playerIn)
     {
-		//NBTHelper.setInteger(stack, "attackTime", 0);
 		NBTHelper.setBoolean(stack, "attacking", false);
         return stack;
     }
 	
+	@Override
 	public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityPlayer playerIn, int timeLeft)
 	{
-		//NBTHelper.setInteger(stack, "attackTime", 0);
 		NBTHelper.setBoolean(stack, "attacking", false);
 	}
 	
@@ -163,17 +152,7 @@ public class ItemWeaponBase extends ItemUnreal
 			par3List.add("Ammo: " + (NBTHelper.getInt(par1ItemStack, "ammoAmount")) + "/" + (NBTHelper.getInt(par1ItemStack, "ammoMax")));
 		}
 	}
-	/*
-	@Override
-	/**
-	 * Callback for item usage. If the item does something special on right clicking, he will have one of those. Return
-	 * True if something happen and false if it don't. This is for ITEMS, not BLOCKS
-	 *//*
-    public boolean onItemUse(ItemStack p_77648_1_, EntityPlayer p_77648_2_, World p_77648_3_, int p_77648_4_, int p_77648_5_, int p_77648_6_, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_)
-    {
-        return true;
-    }
-	  */
+	
 	private void setNBTDefaults(ItemStack par1ItemStack, int ammoDefault)
 	{
 		NBTHelper.setBoolean(par1ItemStack, "consumeMode", false);
@@ -188,23 +167,7 @@ public class ItemWeaponBase extends ItemUnreal
 	private void toggleConsume(ItemStack par1ItemStack)
 	{
 		NBTHelper.setBoolean(par1ItemStack, "consumeMode", !NBTHelper.getBoolean(par1ItemStack, "consumeMode"));
-		//consumeMode = !consumeMode;
 	}
-	
-	private Item setAmmoItem(ItemStack ammoStack)
-	{
-		ammo=ItemStack.copyItemStack(ammoStack);
-		return this;
-	}
-	/*
-	@Override
-	public Multimap getItemAttributeModifiers()
-	{
-		Multimap multimap = super.getItemAttributeModifiers();
-		multimap.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier", (double)this.meleeDamageAmount, 1));
-		return multimap;
-	}
-	 */
 	
 	/**
 	 * Return an item rarity from EnumRarity
@@ -229,20 +192,6 @@ public class ItemWeaponBase extends ItemUnreal
 	}
 	
 	@Override
-	public void getSubItems(Item par1item, CreativeTabs par2CreativeTabs, List par3List)
-	{
-		if(((ItemWeaponBase)par1item).getDamageOnCraft() != 0)
-		{
-			par3List.add(new ItemStack(par1item, 1, 1));
-			par3List.add(new ItemStack(par1item, 1, par1item.getMaxDamage()));
-		}
-		if(((ItemWeaponBase)par1item).getDamageOnCraft() != 1 && ((ItemWeaponBase)par1item).getDamageOnCraft() != par1item.getMaxDamage())
-		{
-			par3List.add(new ItemStack(par1item, 1, ((ItemWeaponBase)par1item).getDamageOnCraft()));
-		}
-	}
-	
-	@Override
 	public boolean onBlockStartBreak(ItemStack itemstack, BlockPos pos, EntityPlayer player)
 	{
 		return true;
@@ -251,13 +200,16 @@ public class ItemWeaponBase extends ItemUnreal
 	@Override
 	public boolean onEntitySwing(EntityLivingBase entityLiving, ItemStack stack)
 	{
+		if(entityLiving instanceof EntityPlayer && (((EntityPlayer) entityLiving).getEntityData().getInteger("playerGameType")==3))
+		{
+			return true;
+		}
 		return true;
 	}
 	
 	@Override
 	public int getMaxItemUseDuration(ItemStack par1ItemStack)
 	{
-		
 		return NBTHelper.getInt(par1ItemStack, "maxAttackTime");
 	}
 	

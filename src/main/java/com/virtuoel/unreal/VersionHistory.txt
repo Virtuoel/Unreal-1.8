@@ -1,6 +1,6 @@
 Versions:
 
-Current: 0.2.0.16
+Current: 0.2.0.17
 
 Features:(A Lot Currently NYI)
 
@@ -62,6 +62,13 @@ Syntax List
 -Translocator model
 
 Changelog:
+
+0.2.0.17
+---
+[Bugfix] Translocator no longer recalls for spectators
+[Bugfix] Misc recipe fixes
+[Addition] Translocator Disc renders (may need tweaking)
+[Change] Changes to how items with durability can be recharged
 
 0.2.0.16
 ---

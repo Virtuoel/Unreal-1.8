@@ -27,6 +27,7 @@ import com.virtuoel.unreal.item.ItemShovelUnreal;
 import com.virtuoel.unreal.item.ItemSwordUnreal;
 import com.virtuoel.unreal.item.ItemUnreal;
 import com.virtuoel.unreal.item.ItemUnrealDamageable;
+import com.virtuoel.unreal.item.ItemUnrealRechargeable;
 import com.virtuoel.unreal.item.ItemVoiceBox;
 import com.virtuoel.unreal.item.ItemWeaponBase;
 import com.virtuoel.unreal.item.ItemWeaponTranslocator;
@@ -392,7 +393,7 @@ public class UnrealItems
 				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
 		
 		tarydPowerBasic = 
-				new ItemUnrealDamageable()
+				new ItemUnrealRechargeable(new ItemStack(UnrealItems.shardTarydium,1,0), 10)
 				.setDamageOnCraft(1).setMaxDamage(101)
 				.setUnlocalizedName(Names.Items.TARYDIUM_POWER)
 				.setMaxStackSize(1)
@@ -1025,7 +1026,8 @@ public class UnrealItems
 		
 		//misc pickups
 		invisibility = 
-				new ItemUnreal()
+				new ItemUnrealDamageable()
+				.setDamageOnCraft(1).setMaxDamage(101)
 				.setUnlocalizedName(Names.Items.INVISIBILITY)
 				.setMaxStackSize(1)
 				.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);

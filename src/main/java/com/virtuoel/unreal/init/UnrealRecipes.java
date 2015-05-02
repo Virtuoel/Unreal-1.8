@@ -1201,7 +1201,7 @@ public class UnrealRecipes
 			}));
 		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.voiceBox,1), new Object[]{
-			UnrealItems.ammoFlakShell,"blockRedstone",Blocks.jukebox,UnrealItems.chainsawBlade,UnrealItems.weaponCasingBasic,UnrealItems.ammoEightball,UnrealItems.gunBarrelIron,UnrealItems.tarydPowerBasic,"record",
+			UnrealItems.ammoFlakShell,"blockRedstone",Blocks.jukebox,UnrealItems.chainsawBlade,UnrealItems.weaponCasingBasic,UnrealItems.ammoEightball,UnrealItems.gunBarrelIron,new ItemStack(UnrealItems.tarydPowerBasic,1,OreDictionary.WILDCARD_VALUE),"record",
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockEnderCrystal,1), new Object[]{

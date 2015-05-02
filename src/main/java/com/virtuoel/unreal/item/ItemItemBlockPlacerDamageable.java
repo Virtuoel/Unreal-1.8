@@ -35,6 +35,12 @@ public class ItemItemBlockPlacerDamageable extends ItemItemBlockPlacer
 		.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
 	}
 	
+	@Override
+	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
+	{
+		return false;
+	}
+	
 	public ItemItemBlockPlacerDamageable setDamageOnCraft(int dmg)
 	{
 		this.damageOnCraft = dmg <= 0 ? 0 : dmg;

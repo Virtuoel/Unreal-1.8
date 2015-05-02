@@ -3,10 +3,13 @@ package com.virtuoel.unreal.item;
 import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 import com.virtuoel.unreal.creativetab.CreativeTabUnreal;
+import com.virtuoel.unreal.init.UnrealBlocks;
 
 
 public class ItemUnrealDamageable extends ItemUnreal
@@ -21,6 +24,12 @@ public class ItemUnrealDamageable extends ItemUnreal
 		.setCreativeTab(CreativeTabUnreal.UNREAL_TAB);
 	}
 	
+	@Override
+	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
+	{
+		return false;
+	}
+	
 	public ItemUnrealDamageable setDamageOnCraft(int dmg)
 	{
 		this.damageOnCraft = dmg <= 0 ? 0 : dmg;
@@ -30,6 +39,16 @@ public class ItemUnrealDamageable extends ItemUnreal
 	public int getDamageOnCraft()
 	{
 		return damageOnCraft;
+	}
+	
+	@Override
+	public void onUpdate(ItemStack par1ItemStack, World p_77663_2_, Entity p_77663_3_, int p_77663_4_, boolean p_77663_5_)
+	{
+		super.onUpdate(par1ItemStack, p_77663_2_, p_77663_3_, p_77663_4_, p_77663_5_);
+		if(par1ItemStack.getItemDamage()<0)
+		{
+			par1ItemStack.setItemDamage(0);
+		}
 	}
 	
 	@Override
