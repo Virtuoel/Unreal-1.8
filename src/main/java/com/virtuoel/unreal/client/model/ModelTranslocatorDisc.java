@@ -9,11 +9,11 @@ public class ModelTranslocatorDisc extends ModelBase
 	//fields
 	ModelRenderer Base;
 	ModelRenderer Stick;
-	ModelRenderer Shape1;
-	ModelRenderer Shape2;
-	ModelRenderer Shape3;
-	ModelRenderer Shape4;
-	ModelRenderer Shape5;
+	ModelRenderer Left;
+	ModelRenderer Front;
+	ModelRenderer Right;
+	ModelRenderer Back;
+	ModelRenderer Top;
 	
 	public ModelTranslocatorDisc()
 	{
@@ -21,40 +21,40 @@ public class ModelTranslocatorDisc extends ModelBase
 		//textureHeight = 32;
 		
 		Base = new ModelRenderer(this, 0, 4);
+		Base.setTextureSize(32, 32);
 		Base.addBox(-2.5F, -0.5F, -2.5F, 5, 1, 5);
-		Base.setRotationPoint(0F, 23F, 0F);
-		//Base.setTextureSize(32, 32);
-		//Base.mirror = true;
+		Base.setRotationPoint(0F, 7F, 0F);
+		Base.mirror = true;
 		Stick = new ModelRenderer(this, 16, 0);
+		Stick.setTextureSize(32, 32);
 		Stick.addBox(-0.5F, -4.5F, -0.5F, 1, 4, 1);
-		Stick.setRotationPoint(0F, 23F, 0F);
-		//Stick.setTextureSize(32, 32);
-		//Stick.mirror = true;
-		Shape1 = new ModelRenderer(this, 0, 0);
-		Shape1.addBox(0.5F, -0.5F, -0.5F, 1, 1, 1);
-		Shape1.setRotationPoint(0F, 19F, 0F);
-		//Shape1.setTextureSize(32, 32);
-		//Shape1.mirror = true;
-		Shape2 = new ModelRenderer(this, 4, 0);
-		Shape2.addBox(-0.5F, -0.5F, -1.5F, 1, 1, 1);
-		Shape2.setRotationPoint(0F, 19F, 0F);
-		//Shape2.setTextureSize(32, 32);
-		//Shape2.mirror = true;
-		Shape3 = new ModelRenderer(this, 0, 0);
-		Shape3.addBox(-1.5F, -0.5F, -0.5F, 1, 1, 1);
-		Shape3.setRotationPoint(0F, 19F, 0F);
-		//Shape3.setTextureSize(32, 32);
-		//Shape3.mirror = true;
-		Shape4 = new ModelRenderer(this, 4, 0);
-		Shape4.addBox(-0.5F, -0.5F, 0.5F, 1, 1, 1);
-		Shape4.setRotationPoint(0F, 19F, 0F);
-		//Shape4.setTextureSize(32, 32);
-		//Shape4.mirror = true;
-		Shape5 = new ModelRenderer(this, 8, 0);
-		Shape5.addBox(-0.5F, -1.5F, -0.5F, 1, 1, 1);
-		Shape5.setRotationPoint(0F, 19F, 0F);
-		//Shape5.setTextureSize(32, 32);
-		//Shape5.mirror = true;
+		Stick.setRotationPoint(0F, 7F, 0F);
+		Stick.mirror = true;
+		Left = new ModelRenderer(this, 0, 0);
+		Left.setTextureSize(32, 32);
+		Left.addBox(0.5F, -0.5F, -0.5F, 1, 1, 1);
+		Left.setRotationPoint(0F, 7F, 0F);
+		Left.mirror = true;
+		Front = new ModelRenderer(this, 4, 0);
+		Front.setTextureSize(32, 32);
+		Front.addBox(-0.5F, -0.5F, -1.5F, 1, 1, 1);
+		Front.setRotationPoint(0F, 7F, 0F);
+		Front.mirror = true;
+		Right = new ModelRenderer(this, 0, 0);
+		Right.setTextureSize(32, 32);
+		Right.addBox(-1.5F, -0.5F, -0.5F, 1, 1, 1);
+		Right.setRotationPoint(0F, 7F, 0F);
+		Right.mirror = true;
+		Back = new ModelRenderer(this, 4, 0);
+		Back.setTextureSize(32, 32);
+		Back.addBox(-0.5F, -0.5F, 0.5F, 1, 1, 1);
+		Back.setRotationPoint(0F, 7F, 0F);
+		Back.mirror = true;
+		Top = new ModelRenderer(this, 8, 0);
+		Top.setTextureSize(32, 32);
+		Top.addBox(-0.5F, -1.5F, -0.5F, 1, 1, 1);
+		Top.setRotationPoint(0F, 7F, 0F);
+		Top.mirror = true;
 	}
 	
 	public void render(Entity entity, float f0, float f1, float f2, float f3, float f4, float f5)
@@ -62,11 +62,11 @@ public class ModelTranslocatorDisc extends ModelBase
 		super.render(entity, f0, f1, f2, f3, f4, f5);
 		Base.render(f5);
 		Stick.render(f5);
-		Shape1.render(f5);
-		Shape2.render(f5);
-		Shape3.render(f5);
-		Shape4.render(f5);
-		Shape5.render(f5);
+		Left.render(f5);
+		Front.render(f5);
+		Right.render(f5);
+		Back.render(f5);
+		Top.render(f5);
 	}
 	
 }

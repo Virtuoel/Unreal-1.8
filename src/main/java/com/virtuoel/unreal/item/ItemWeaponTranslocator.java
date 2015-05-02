@@ -52,6 +52,10 @@ public class ItemWeaponTranslocator extends ItemWeaponBase
 		}
 		if(discEjected(stack))
 		{
+			if(entityLiving instanceof EntityPlayer && (((EntityPlayer) entityLiving).getEntityData().getInteger("playerGameType")==3))
+			{
+				return true;
+			}
 			EntityTranslocatorDisc disc = getDisc(stack);
 			if(disc != null)
 			{

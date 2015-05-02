@@ -1341,10 +1341,6 @@ public class UnrealRecipes
 			"PSP","FCF","RDR",'P',Blocks.piston,'S',Items.shears,'F',"blockFlint",'C',UnrealBlocks.blockMachineFrameBasic,'R',Items.comparator,'D',Blocks.dropper,
 			}));
 		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Blocks.stonebrick,4,1), new Object[]{
-			" M ","MSM"," M ",'M',Blocks.mossy_cobblestone,'S',UnrealBlocks.stonePolished,
-			}));
-		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.oreBedrockiumHidden,1), new Object[]{
 			"IOI","ONO","IOI",'I',"blockInk",'O',UnrealBlocks.oreTarydiumObsidian,'N',"blockBedrockium",
 			}));
