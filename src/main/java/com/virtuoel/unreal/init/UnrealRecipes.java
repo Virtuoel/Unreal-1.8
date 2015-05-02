@@ -386,7 +386,7 @@ public class UnrealRecipes
 		}
 		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustEmeraldTiny,16), new Object[]{
-			UnrealItems.invisibility,"virtuoel.unreal.debug",
+			new ItemStack(UnrealItems.invisibility,1,OreDictionary.WILDCARD_VALUE),"virtuoel.unreal.debug",
 			}));
 		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustIron,2), new Object[]{
@@ -903,11 +903,19 @@ public class UnrealRecipes
 			}));
 		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.flakShellCold,1), new Object[]{
-			UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.caseTitanium,
+			UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.caseTitanium,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,
 			}));
 		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.ammoFlakShell,1), new Object[]{
 			UnrealItems.flakShellWarm,"dyeOrange",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.ammoFlakShell,3), new Object[]{
+			UnrealItems.flakShellWarm,UnrealItems.flakShellWarm,UnrealItems.flakShellWarm,"dyeOrange",
+			}));
+		
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.ammoFlakShell,8), new Object[]{
+			UnrealItems.flakShellWarm,UnrealItems.flakShellWarm,UnrealItems.flakShellWarm,"dyeOrange",UnrealItems.flakShellWarm,UnrealItems.flakShellWarm,UnrealItems.flakShellWarm,UnrealItems.flakShellWarm,UnrealItems.flakShellWarm,
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.ladderIron,3), new Object[]{
@@ -927,7 +935,7 @@ public class UnrealRecipes
 			}));
 		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.flakShellCold,1), new Object[]{
-			UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.caseIron,
+			UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.caseIron,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,UnrealItems.flak,
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockUUTC,1), new Object[]{
@@ -1369,7 +1377,7 @@ public class UnrealRecipes
 			UnrealItems.healthSuperEmpty,"listAllHealth","virtuoel.unreal.debug","virtuoel.unreal.debug",
 			}));
 		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.invisibility,1), new Object[]{
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.invisibility,1,1), new Object[]{
 			"EGE","FPF","MTM",'E',"dustEmerald",'G',"blockGlassLime",'F',UnrealBlocks.blockMachineFrameBasic,'T',new ItemStack(UnrealItems.tarydPowerBasic,1,OreDictionary.WILDCARD_VALUE),'M',"blockMagnesium",'P',new ItemStack(Items.potionitem,1,8270),
 			}));
 		
