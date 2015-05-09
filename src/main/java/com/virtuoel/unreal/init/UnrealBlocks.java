@@ -511,10 +511,11 @@ public class UnrealBlocks
 			}
 			public String getStepSound()
 			{
-				return "dig.stone";
+				return "step.stone";
 			}
 		});
 		Blocks.enchanting_table.setHarvestLevel("pickaxe", 3);
+		Blocks.slime_block.setHarvestLevel("shovel", 0);
 		Blocks.slime_block.setHardness(0.5F);
 		
 		//blocks

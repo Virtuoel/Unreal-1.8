@@ -40,6 +40,7 @@ Syntax List
 [Removal]
 [Bug]
 [WorldGen]
+[Recipe]
 [Partial]
 [Version]
 [Update]
@@ -62,6 +63,11 @@ Syntax List
 -Translocator model
 
 Changelog:
+
+0.2.0.18
+---
+[Recipe][Balance] Recipe rebalancing
+[Change][Internal] Force Field Tweaks
 
 0.2.0.17
 ---

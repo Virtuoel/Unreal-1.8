@@ -859,7 +859,7 @@ public class UnrealRecipes
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.armorShieldBelt,1), new Object[]{
-			"TLT","O O","TPT",'T',"blockTitanium",'L',"blockEmerald",'O',"blockGold",'P',new ItemStack(UnrealItems.tarydPowerBasic,1,OreDictionary.WILDCARD_VALUE),
+			"TLT","OGO","TPT",'T',"blockTitanium",'L',"blockEmerald",'O',"blockGold",'P',new ItemStack(UnrealItems.tarydPowerBasic,1,OreDictionary.WILDCARD_VALUE),'O',"blockTear",
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.gunBarrelIron,4), new Object[]{
@@ -883,11 +883,11 @@ public class UnrealRecipes
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.gunTranslocator,1,((ItemWeaponBase)UnrealItems.gunTranslocator).getDamageOnCraft()), new Object[]{
-			"DBE","SCR","TTT",'T',"blockTitanium",'D',UnrealItems.translocatorDisc,'C',UnrealItems.weaponCasingAdv,'B',UnrealItems.gunBarrelIron,'S',Blocks.daylight_detector,'R',"blockRedstone",'E',"blockEnder",
+			"DBE","SCR","TTT",'T',"blockTitanium",'D',UnrealItems.translocatorDisc,'C',UnrealItems.weaponCasingAdv,'B',UnrealItems.gunBarrelIron,'S',Blocks.daylight_detector,'R',UnrealItems.dispersionUpgrade,'E',"blockEnder",
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.gunTranslocator,1,((ItemWeaponBase)UnrealItems.gunTranslocator).getDamageOnCraft()), new Object[]{
-			"DBE","SCR","TTT",'T',"blockTitanium",'D',UnrealItems.translocatorDisc,'C',UnrealItems.weaponCasingAdv,'B',UnrealItems.gunBarrelIron,'S',Blocks.daylight_detector,'R',"blockRedstone",'E',"blockEnderPearl",
+			"DBE","SCR","TTT",'T',"blockTitanium",'D',UnrealItems.translocatorDisc,'C',UnrealItems.weaponCasingAdv,'B',UnrealItems.gunBarrelIron,'S',Blocks.daylight_detector,'R',UnrealItems.dispersionUpgrade,'E',"blockEnderPearl",
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.weaponCasingAdv,1), new Object[]{
@@ -1285,7 +1285,7 @@ public class UnrealRecipes
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.universalTranslator,1), new Object[]{
-			"TGT","PBP","TRT",'I',"ingotTitanium",'T',"blockTitanium",'B',UnrealItems.dispersionUpgrade,'G',"blockGlassGreen",'P',new ItemStack(UnrealItems.tarydPowerBasic,1,OreDictionary.WILDCARD_VALUE),'R',"blockRedstone"
+			"TGT","PBP","TRT",'I',"ingotTitanium",'T',"blockTitanium",'B',UnrealBlocks.blockMachineFrameBasic,'G',"blockGlassGreen",'P',new ItemStack(UnrealItems.tarydPowerBasic,1,OreDictionary.WILDCARD_VALUE),'R',"blockRedstone"
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.rodIron,4), new Object[]{
@@ -1302,6 +1302,10 @@ public class UnrealRecipes
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.nuggetBedrockium,1), new Object[]{
 			"CDC","DGD","CDC",'C',"compressedCobblestone2x",'D',"compressedCobblestone3x",'G',"gemDiamond"
+			}));
+		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.nuggetBedrockium,1), new Object[]{
+			"CDC","DGD","CDC",'C',"compressedNetherrack2x",'D',"compressedNetherrack3x",'G',"gemDiamond"
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.lensTarydium,1), new Object[]{
@@ -1578,6 +1582,7 @@ public class UnrealRecipes
 		OreDictionary.registerOre("dustDiamond", UnrealItems.dustDiamond);
 		OreDictionary.registerOre("dustEmerald", UnrealItems.dustEmerald);
 		OreDictionary.registerOre("dustNetherQuartz", UnrealItems.dustNetherQuartz);
+		OreDictionary.registerOre("dustQuartz", UnrealItems.dustNetherQuartz);
 		OreDictionary.registerOre("record", UnrealItems.recordLongFlight);
 		OreDictionary.registerOre("blockNetherWart", UnrealBlocks.blockNetherWart);
 		OreDictionary.registerOre("oreAsbestos", UnrealBlocks.oreAsbestos);
