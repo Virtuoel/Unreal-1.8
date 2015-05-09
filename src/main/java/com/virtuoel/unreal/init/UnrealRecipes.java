@@ -136,6 +136,26 @@ public class UnrealRecipes
 				Items.spider_eye,Blocks.red_mushroom,Items.sugar,
 				}));
 		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_axe,1), new Object[]{
+			"TT ","TS "," S ",'T',"stoneDiorite",'S',"stickWood",
+			}));
+		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_hoe,1), new Object[]{
+			"TT"," S"," S",'T',"stoneDiorite",'S',"stickWood",
+			}));
+		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_pickaxe,1), new Object[]{
+			"TTT"," S "," S ",'T',"stoneDiorite",'S',"stickWood",
+			}));
+		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_shovel,1), new Object[]{
+			"T","S","S",'T',"stoneDiorite",'S',"stickWood",
+			}));
+		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.stone_sword,1), new Object[]{
+			"T","T","S",'T',"stoneDiorite",'S',"stickWood",
+			}));
+		
 		//TODO temporary debugTool recipes ---------------------------------------------------------------------------------------------------------------------------------
 		
 		//removing
@@ -859,7 +879,7 @@ public class UnrealRecipes
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.armorShieldBelt,1), new Object[]{
-			"TLT","OGO","TPT",'T',"blockTitanium",'L',"blockEmerald",'O',"blockGold",'P',new ItemStack(UnrealItems.tarydPowerBasic,1,OreDictionary.WILDCARD_VALUE),'O',"blockTear",
+			"TLT","OGO","TPT",'T',"blockTitanium",'L',"blockEmerald",'O',"blockGold",'P',new ItemStack(UnrealItems.tarydPowerBasic,1,OreDictionary.WILDCARD_VALUE),'G',"blockTear",
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.gunBarrelIron,4), new Object[]{
@@ -1488,6 +1508,12 @@ public class UnrealRecipes
 		OreDictionary.registerOre("netherrack", Blocks.netherrack);
 		OreDictionary.registerOre("obsidian", Blocks.obsidian);
 		OreDictionary.registerOre("glowstone", Blocks.glowstone);
+		OreDictionary.registerOre("stoneGranite", new ItemStack(Blocks.stone, 1, 1));
+		OreDictionary.registerOre("stoneGranitePolished", new ItemStack(Blocks.stone, 1, 2));
+		OreDictionary.registerOre("stoneDiorite", new ItemStack(Blocks.stone, 1, 3));
+		OreDictionary.registerOre("stoneDioritePolished", new ItemStack(Blocks.stone, 1, 4));
+		OreDictionary.registerOre("stoneAndesite", new ItemStack(Blocks.stone, 1, 5));
+		OreDictionary.registerOre("stoneAndesitePolished", new ItemStack(Blocks.stone, 1, 6));
 		OreDictionary.registerOre("blockSlime", Blocks.slime_block);
 		OreDictionary.registerOre("dustGunpowder", Items.gunpowder);
 		OreDictionary.registerOre("rodBlaze", Items.blaze_rod);
