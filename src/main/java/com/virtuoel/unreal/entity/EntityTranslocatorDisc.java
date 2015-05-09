@@ -107,7 +107,7 @@ public class EntityTranslocatorDisc extends EntityProjectileUnreal
                     this.setDead();
                 }*/
                 
-                this.setRotation(0.01F, 0.0F);
+                this.setRotation(this.rotationYaw, 0.01F);
             }
             else
             {

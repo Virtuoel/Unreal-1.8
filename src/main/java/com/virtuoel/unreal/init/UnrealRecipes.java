@@ -1515,6 +1515,7 @@ public class UnrealRecipes
 		OreDictionary.registerOre("stoneAndesite", new ItemStack(Blocks.stone, 1, 5));
 		OreDictionary.registerOre("stoneAndesitePolished", new ItemStack(Blocks.stone, 1, 6));
 		OreDictionary.registerOre("blockSlime", Blocks.slime_block);
+		OreDictionary.registerOre("blockDyeBlue", Blocks.lapis_block);
 		OreDictionary.registerOre("dustGunpowder", Items.gunpowder);
 		OreDictionary.registerOre("rodBlaze", Items.blaze_rod);
 		OreDictionary.registerOre("blazeRod", Items.blaze_rod);
@@ -1624,7 +1625,9 @@ public class UnrealRecipes
 		OreDictionary.registerOre("nuggetBedrockium", UnrealItems.nuggetBedrockium);
 		OreDictionary.registerOre("blockBedrockium", UnrealBlocks.blockBedrockium);
 		OreDictionary.registerOre("blockCocoa", UnrealBlocks.blockCocoa);
+		OreDictionary.registerOre("blockDyeBrown", UnrealBlocks.blockCocoa);
 		OreDictionary.registerOre("blockInk", UnrealBlocks.blockInk);
+		OreDictionary.registerOre("blockDyeBlack", UnrealBlocks.blockInk);
 		OreDictionary.registerOre("obsidian", UnrealBlocks.obsidianNether);
 		OreDictionary.registerOre("netherobsidian", UnrealBlocks.obsidianNether);
 		OreDictionary.registerOre("blockGold", UnrealBlocks.blockGoldCorrugated);
