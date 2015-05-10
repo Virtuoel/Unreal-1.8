@@ -37,7 +37,6 @@ public class ItemArmorJumpBoots extends ItemArmorUnrealBase
 	 * Return an item rarity from EnumRarity
 	 */
 	@Override
-	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack par1ItemStack)
 	{
 		return EnumRarity.RARE;
@@ -63,60 +62,8 @@ public class ItemArmorJumpBoots extends ItemArmorUnrealBase
 				PotionEffect potioneffect = new PotionEffect(8, 2, 3, true, false);
 				par2EntityPlayer.addPotionEffect(potioneffect);
 				par2EntityPlayer.fallDistance = 0.0F;
-				/*
-				if(par1World.isRemote)
-				{
-					//if(par2EntityPlayer.inventory.armorInventory[Reference.Armor.Type.BOOTS] != null && par2EntityPlayer.inventory.armorInventory[Reference.Armor.Type.BOOTS].getItem() == this)
-					//{
-						par2EntityPlayer.stepHeight = Reference.Entity.DEFAULT_STEP_HEIGHT * 2.0F;
-					//}
-					//else
-					//{
-					//	par2EntityPlayer.stepHeight = Reference.Entity.DEFAULT_STEP_HEIGHT;
-					//}
-				}*/
-			}/*
-			else
-			{
-				if(par1World.isRemote)
-				{
-					par2EntityPlayer.stepHeight = Reference.Entity.DEFAULT_STEP_HEIGHT;
-				}
-			}*/
+			}
 		}
 	}
-	/*
-	@Override
-	public void onUpdate(ItemStack p_77663_1_, World p_77663_2_, Entity p_77663_3_, int p_77663_4_, boolean p_77663_5_)
-	{
-		super.onUpdate(p_77663_1_, p_77663_2_, p_77663_3_, p_77663_4_, p_77663_5_);
-		if(p_77663_2_.isRemote && p_77663_3_ instanceof EntityLivingBase)
-		{
-			if(((EntityLivingBase)p_77663_3_).getEquipmentInSlot(0) != null && ((EntityLivingBase)p_77663_3_).getEquipmentInSlot(0).getItem() == this)
-			{
-				p_77663_3_.stepHeight = Reference.Entity.DEFAULT_STEP_HEIGHT * 2.0F;
-			}
-			else
-			{
-				p_77663_3_.stepHeight = Reference.Entity.DEFAULT_STEP_HEIGHT;
-			}
-		}
-	}*/
-	/*
-	@SubscribeEvent
-	public void onLiving(LivingUpdateEvent event)
-	{
-		if(event.entityLiving instanceof EntityPlayer)
-		{
-			EntityPlayer player = (EntityPlayer)event.entityLiving;
-			ItemStack itemStack = player.inventory.armorItemInSlot(0);
-			if (itemStack != null && itemStack.getItem() == this){
-				player.stepHeight = Reference.Entity.DEFAULT_STEP_HEIGHT * 2.0F;
-			}
-				
-			else
-				player.stepHeight = Reference.Entity.DEFAULT_STEP_HEIGHT;
-		}
-	}*/
 }
 

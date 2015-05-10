@@ -34,7 +34,6 @@ public class ItemArmorToxinSuit extends ItemArmorUnrealBase
 	 * Return an item rarity from EnumRarity
 	 */
 	@Override
-	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack par1ItemStack)
 	{
 		return EnumRarity.UNCOMMON;

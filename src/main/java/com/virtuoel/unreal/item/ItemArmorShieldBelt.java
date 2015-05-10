@@ -24,6 +24,7 @@ public class ItemArmorShieldBelt extends ItemArmorUnrealBase
 		setNoRepair();
 	}
 	
+	@Override
 	@SideOnly(Side.CLIENT)
     public net.minecraft.client.model.ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot)
     {
@@ -42,7 +43,6 @@ public class ItemArmorShieldBelt extends ItemArmorUnrealBase
 	 * Return an item rarity from EnumRarity
 	 */
 	@Override
-	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack par1ItemStack)
 	{
 		return EnumRarity.EPIC;

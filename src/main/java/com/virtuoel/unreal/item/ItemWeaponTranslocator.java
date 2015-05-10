@@ -118,7 +118,8 @@ public class ItemWeaponTranslocator extends ItemWeaponBase
 				if(disc != null && ((!Settings.Weapons.translocatorTeleportAcrossDimensions && disc.dimension == par3EntityPlayer.dimension) || Settings.Weapons.translocatorTeleportAcrossDimensions))
 				{
 					//for Translocator entity teleport
-
+					
+					disc.teleported = true;
 					disc.setDead();
 					double newX = disc.posX;
 					double newY = disc.posY;
@@ -317,7 +318,6 @@ public class ItemWeaponTranslocator extends ItemWeaponBase
 	 * Return an item rarity from EnumRarity
 	 */
 	@Override
-	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack par1ItemStack)
 	{
 		return EnumRarity.EPIC;
