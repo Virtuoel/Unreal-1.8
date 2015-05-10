@@ -1,6 +1,6 @@
 Versions:
 
-Current: 0.2.0.17
+Current: 0.2.0.18
 
 Features:(A Lot Currently NYI)
 
@@ -57,17 +57,18 @@ Syntax List
 
 //TODO:
 -Material names to reference file
--updateItemStackNBT(NBTTagCompound tag) for weapons
+-updateItemStackNBT(NBTTagCompound tag) for weapons (?)
 -Shield Belt model
 -Translator model
--Translocator model
 
 Changelog:
+==========
 
 0.2.0.18
 ---
 [Recipe][Balance] Recipe rebalancing
 [Change][Internal] Force Field Tweaks
+[Change] Translocator Disc renders correctly
 
 0.2.0.17
 ---
