@@ -1,6 +1,6 @@
 Versions:
 
-Current: 0.2.0.18
+Current: 0.2.0.19
 
 Features:(A Lot Currently NYI)
 
@@ -63,6 +63,11 @@ Syntax List
 
 Changelog:
 ==========
+
+0.2.0.19
+---
+[Addition] Translocator Disc will break when on fire
+[Bugfix] Translocator sometimes didn't teleport correctly
 
 0.2.0.18
 ---

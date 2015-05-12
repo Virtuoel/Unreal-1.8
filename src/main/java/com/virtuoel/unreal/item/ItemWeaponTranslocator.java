@@ -3,13 +3,11 @@ package com.virtuoel.unreal.item;
 import java.util.List;
 import java.util.UUID;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -19,9 +17,7 @@ import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.virtuoel.unreal.entity.EntityProjectileUnreal;
 import com.virtuoel.unreal.entity.EntityTranslocatorDisc;
-import com.virtuoel.unreal.init.UnrealItems;
 import com.virtuoel.unreal.reference.Reference;
 import com.virtuoel.unreal.reference.Settings;
 import com.virtuoel.unreal.utility.NBTHelper;
@@ -60,12 +56,11 @@ public class ItemWeaponTranslocator extends ItemWeaponBase
 			if(disc != null)
 			{
 				disc.setDead();
-			}
 				entityLiving.worldObj.playSoundAtEntity(entityLiving, Reference.MOD_ID + ":weapons.gunTranslocator.recall", 0.3F, 1.0F);
-				
-				stack.setItemDamage(1);
-				NBTHelper.setLong(stack, "discUUIDLeast", 0);
-				NBTHelper.setLong(stack, "discUUIDMost", 0);
+			}
+			stack.setItemDamage(1);
+			NBTHelper.setLong(stack, "discUUIDLeast", 0);
+			NBTHelper.setLong(stack, "discUUIDMost", 0);
 		}
 		return true;
 	}
@@ -93,7 +88,7 @@ public class ItemWeaponTranslocator extends ItemWeaponBase
 		{
 			setNBTDefaults(par1ItemStack, 1);
 		}
-		if(!par3EntityPlayer.isSneaking())
+		if(!par2World.isRemote && !par3EntityPlayer.isSneaking())
 		{
 			if(!discEjected(par1ItemStack))
 			{
@@ -118,13 +113,18 @@ public class ItemWeaponTranslocator extends ItemWeaponBase
 				if(disc != null && ((!Settings.Weapons.translocatorTeleportAcrossDimensions && disc.dimension == par3EntityPlayer.dimension) || Settings.Weapons.translocatorTeleportAcrossDimensions))
 				{
 					//for Translocator entity teleport
+					NBTHelper.setBoolean(par1ItemStack, "teleporting", true);
 					
 					disc.teleported = true;
-					disc.setDead();
 					double newX = disc.posX;
 					double newY = disc.posY;
 					double newZ = disc.posZ;
-					//((EntityTranslocatorDisc) i).doTeleport(par3EntityPlayer);
+					
+					if (par3EntityPlayer.isRiding())
+					{
+						par3EntityPlayer.mountEntity((Entity)null);
+					}
+					
 					if(Settings.Weapons.translocatorTeleportAcrossDimensions && disc.dimension != par3EntityPlayer.dimension)
 					{
 						par3EntityPlayer.setWorld(DimensionManager.getWorld(disc.dimension));
@@ -138,6 +138,8 @@ public class ItemWeaponTranslocator extends ItemWeaponBase
 					par1ItemStack.setItemDamage(1);
 					NBTHelper.setLong(par1ItemStack, "discUUIDLeast", 0);
 					NBTHelper.setLong(par1ItemStack, "discUUIDMost", 0);
+					disc.setDead();
+					NBTHelper.setBoolean(par1ItemStack, "teleporting", false);
 				}
 				else if(disc != null)
 				{
@@ -201,7 +203,7 @@ public class ItemWeaponTranslocator extends ItemWeaponBase
 			setNBTDefaults(p_77663_1_, 1);
 		}
 		
-		if(discEjected(p_77663_1_) && getDisc(p_77663_1_) == null)
+		if(!NBTHelper.getBoolean(p_77663_1_, "teleporting") && discEjected(p_77663_1_) && getDisc(p_77663_1_) == null)
 		{
 			p_77663_2_.playSoundAtEntity(p_77663_3_, Reference.MOD_ID + ":weapons.gunTranslocator.recall", 0.3F, 1.0F);
 			p_77663_1_.setItemDamage(1);
@@ -270,6 +272,7 @@ public class ItemWeaponTranslocator extends ItemWeaponBase
 	{
 		NBTHelper.setLong(par1ItemStack, "discUUIDLeast", 0);
 		NBTHelper.setLong(par1ItemStack, "discUUIDMost", 0);
+		NBTHelper.setBoolean(par1ItemStack, "teleporting", false);
 		return par1ItemStack;
 	}
 	

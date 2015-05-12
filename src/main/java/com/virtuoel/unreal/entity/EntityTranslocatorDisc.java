@@ -2,21 +2,14 @@ package com.virtuoel.unreal.entity;
 
 import java.util.List;
 
-import com.virtuoel.unreal.init.UnrealItems;
-import com.virtuoel.unreal.reference.Reference;
-import com.virtuoel.unreal.utility.NBTHelper;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.IProjectile;
 import net.minecraft.entity.monster.EntityEnderman;
-import net.minecraft.entity.monster.EntityEndermite;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.play.server.S2BPacketChangeGameState;
@@ -27,11 +20,13 @@ import net.minecraft.util.EntityDamageSourceIndirect;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+
+import com.virtuoel.unreal.init.UnrealItems;
+import com.virtuoel.unreal.reference.Reference;
+import com.virtuoel.unreal.reference.Settings;
+import com.virtuoel.unreal.utility.NBTHelper;
 
 public class EntityTranslocatorDisc extends EntityProjectileUnreal
 {
@@ -61,6 +56,16 @@ public class EntityTranslocatorDisc extends EntityProjectileUnreal
     public void onUpdate()
     {
     	this.onEntityUpdate();
+    	
+    	if(!Settings.Weapons.translocatorTeleportAcrossDimensions && this.dimensionFired!=this.dimension)
+    	{
+    		this.setDead();
+    	}
+    	
+    	if(this.isBurning())
+    	{
+    		this.setDead();
+    	}
     	
     	if(this.ticksExisted % 10 == 0)
     	{

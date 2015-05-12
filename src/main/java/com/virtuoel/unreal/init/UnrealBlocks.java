@@ -515,6 +515,7 @@ public class UnrealBlocks
 			}
 		});
 		Blocks.enchanting_table.setHarvestLevel("pickaxe", 3);
+		Blocks.enchanting_table.setHardness(6.0F);
 		Blocks.slime_block.setHarvestLevel("shovel", 0);
 		Blocks.slime_block.setHardness(0.5F);
 		

@@ -43,10 +43,12 @@ public class EntityProjectileUnreal extends Entity implements IProjectile
     public int ticksInAir;
     public double damage = 2.0D;
     public int knockbackStrength;
+	public int dimensionFired;
 
     public EntityProjectileUnreal(World worldIn)
     {
         super(worldIn);
+        this.dimensionFired = this.dimension;
         this.renderDistanceWeight = 10.0D;
         this.setSize(0.5F, 0.5F);
     }
@@ -54,6 +56,7 @@ public class EntityProjectileUnreal extends Entity implements IProjectile
     public EntityProjectileUnreal(World worldIn, double x, double y, double z)
     {
         super(worldIn);
+        this.dimensionFired = this.dimension;
         this.renderDistanceWeight = 10.0D;
         this.setSize(0.5F, 0.5F);
         this.setPosition(x, y, z);
@@ -62,6 +65,7 @@ public class EntityProjectileUnreal extends Entity implements IProjectile
     public EntityProjectileUnreal(World worldIn, EntityLivingBase shooter, EntityLivingBase p_i1755_3_, float p_i1755_4_, float p_i1755_5_)
     {
         super(worldIn);
+        this.dimensionFired = this.dimension;
         this.renderDistanceWeight = 10.0D;
         this.setSize(0.5F, 0.5F);
         this.shootingEntity = shooter;
@@ -92,6 +96,7 @@ public class EntityProjectileUnreal extends Entity implements IProjectile
     public EntityProjectileUnreal(World worldIn, EntityLivingBase shooter, float p_i1756_3_)
     {
         super(worldIn);
+        this.dimensionFired = this.dimension;
         this.renderDistanceWeight = 10.0D;
         this.setSize(0.5F, 0.5F);
         this.shootingEntity = shooter;
@@ -163,6 +168,11 @@ public class EntityProjectileUnreal extends Entity implements IProjectile
     public void onUpdate()
     {
         super.onUpdate();
+        
+        if(this.dimensionFired != this.dimension)
+        {
+        	this.setDead();
+        }
 
         if (this.prevRotationPitch == 0.0F && this.prevRotationYaw == 0.0F)
         {
