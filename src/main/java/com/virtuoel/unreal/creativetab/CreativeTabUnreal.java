@@ -16,7 +16,7 @@ public class CreativeTabUnreal
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem()
 		{
-			return UnrealItems.tarydPowerBasic;
+			return UnrealItems.healthSuper;
 		}
 	}.setBackgroundImageName(Reference.MOD_ID + Reference.Files.Extensions.PNG);
 }

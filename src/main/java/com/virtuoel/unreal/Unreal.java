@@ -1,6 +1,10 @@
 package com.virtuoel.unreal;
 
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -14,12 +18,15 @@ import com.virtuoel.unreal.client.handler.KeyInputEventHandler;
 import com.virtuoel.unreal.client.handler.UnrealEventHandler;
 import com.virtuoel.unreal.handler.ConfigurationHandler;
 import com.virtuoel.unreal.handler.UnrealBlockBreakHandler;
+import com.virtuoel.unreal.handler.UnrealBucketHandler;
 import com.virtuoel.unreal.handler.UnrealFuelHandler;
-import com.virtuoel.unreal.init.UnrealRecipes;
 import com.virtuoel.unreal.init.UnrealBlocks;
 import com.virtuoel.unreal.init.UnrealEntities;
+import com.virtuoel.unreal.init.UnrealFluids;
 import com.virtuoel.unreal.init.UnrealItems;
+import com.virtuoel.unreal.init.UnrealRecipes;
 import com.virtuoel.unreal.proxy.IProxy;
+import com.virtuoel.unreal.reference.Names;
 import com.virtuoel.unreal.reference.Reference;
 import com.virtuoel.unreal.reference.Settings;
 import com.virtuoel.unreal.utility.LogHelper;
@@ -51,7 +58,7 @@ public class Unreal
 		{
 			
 			/*
-			ModFluids.initFluids();
+			UnrealFluids.initFluids();
 			LogHelper.info("Fluids and Fluid Blocks Initilized.");
 			*/
 	    	UnrealBlocks.init();
@@ -71,10 +78,10 @@ public class Unreal
 			FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack(Names.Fluids.FLUID_NANOBLACK, FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(UnrealItems.bucketNanoblack), new ItemStack(Items.bucket));
 			LogHelper.info("Fluid Container Items Registered.");
 			
-			UnrealBucketHandler.INSTANCE.buckets.put(ModFluids.fluidBlockMercury, UnrealItems.bucketMercury);
-			UnrealBucketHandler.INSTANCE.buckets.put(ModFluids.fluidBlockTarydiumSludge, UnrealItems.bucketTarydiumSludge);
-			UnrealBucketHandler.INSTANCE.buckets.put(ModFluids.fluidBlockHealth, UnrealItems.bucketHealth);
-			UnrealBucketHandler.INSTANCE.buckets.put(ModFluids.fluidBlockNanoblack, UnrealItems.bucketNanoblack);
+			UnrealBucketHandler.INSTANCE.buckets.put(UnrealFluids.fluidBlockMercury, UnrealItems.bucketMercury);
+			UnrealBucketHandler.INSTANCE.buckets.put(UnrealFluids.fluidBlockTarydiumSludge, UnrealItems.bucketTarydiumSludge);
+			UnrealBucketHandler.INSTANCE.buckets.put(UnrealFluids.fluidBlockHealth, UnrealItems.bucketHealth);
+			UnrealBucketHandler.INSTANCE.buckets.put(UnrealFluids.fluidBlockNanoblack, UnrealItems.bucketNanoblack);
 			MinecraftForge.EVENT_BUS.register(UnrealBucketHandler.INSTANCE);
 			LogHelper.info("Bucket Handler Registered.");
 			*/
