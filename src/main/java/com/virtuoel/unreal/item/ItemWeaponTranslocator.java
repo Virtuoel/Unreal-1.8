@@ -46,7 +46,7 @@ public class ItemWeaponTranslocator extends ItemWeaponBase
 		{
 			setNBTDefaults(stack, 1);
 		}
-		if(discEjected(stack))
+		if(!entityLiving.worldObj.isRemote && discEjected(stack))
 		{
 			if(entityLiving instanceof EntityPlayer && (((EntityPlayer) entityLiving).getEntityData().getInteger("playerGameType")==3))
 			{
