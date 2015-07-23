@@ -16,7 +16,7 @@ import com.virtuoel.unreal.utility.LogHelper;
 
 public class UnrealEventHandler
 {
-	
+
 	private static void handleStepAssist(EntityLivingBase entityLiving)
 	{
 		if(entityLiving instanceof EntityPlayer)
@@ -45,10 +45,12 @@ public class UnrealEventHandler
 	public void onLiving(LivingUpdateEvent event)
 	{
 		handleStepAssist(event.entityLiving);
-		
-		
 	}
 	
-	
+	@SubscribeEvent
+	public void onLivingFall(LivingUpdateEvent event)
+	{
+		
+	}
 	
 }

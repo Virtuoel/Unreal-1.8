@@ -4,6 +4,7 @@ tile.sand.name=Sand
 tile.quartzBlock.name=Block of Quartz
 item.milk.name=Milk Bucket
 item.redstone.name=Redstone Dust
+item.seeds.name=Wheat Seeds
 
 # Other
 nei.load=Load

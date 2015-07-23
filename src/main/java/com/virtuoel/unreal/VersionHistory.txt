@@ -56,10 +56,13 @@ Syntax List
 [LAN]
 
 //TODO:
--Material names to reference file
--updateItemStackNBT(NBTTagCompound tag) for weapons (?)
--Shield Belt model
--Translator model
+- Material names to reference file
+- methods for weapons:
+ > onUsingTick(ItemStack stack, EntityPlayer player, int count)
+ > onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityPlayer playerIn, int timeLeft)
+ > onItemUseFinish(ItemStack stack, World worldIn, EntityPlayer playerIn)
+- Shield Belt model
+- Translator model
 
 Changelog:
 ==========

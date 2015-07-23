@@ -61,42 +61,48 @@ public class ItemWeaponBase extends ItemUnrealRechargeable
 		{
 			par1ItemStack.setItemDamage(par1ItemStack.getMaxDamage());
 		}
-		if(par1ItemStack.getItem() == UnrealItems.gunStinger && NBTHelper.getInt(par1ItemStack, "attackTime") == 1)
-		{
-			p_77663_2_.playSoundAtEntity(p_77663_3_, Reference.MOD_ID + ":weapons."+this.getUnlocalizedName(par1ItemStack).substring(this.getUnlocalizedName(par1ItemStack).indexOf(":")+1)+".startFire", 0.3F, 1.0F);
-		}
-		if(NBTHelper.getInt(par1ItemStack, "attackTime") == (par1ItemStack.getItem() == UnrealItems.gunStinger ? NBTHelper.getBoolean(par1ItemStack, "attacking") ? 4 : -1 : 1)){
-			p_77663_2_.playSoundAtEntity(p_77663_3_, Reference.MOD_ID + ":weapons."+this.getUnlocalizedName(par1ItemStack).substring(this.getUnlocalizedName(par1ItemStack).indexOf(":")+1)+".fire", 0.3F, 1.0F);
-		}
-		if(NBTHelper.getBoolean(par1ItemStack, "attacking") || NBTHelper.getInt(par1ItemStack, "attackTime") > 0)
-		{
-			NBTHelper.setInteger(par1ItemStack, "attackTime", NBTHelper.getInt(par1ItemStack, "attackTime") + 1);
-		}
-		if(par1ItemStack.getItem() == UnrealItems.gunFlakCannon && NBTHelper.getInt(par1ItemStack, "attackTime") == 10){
-			p_77663_2_.playSoundAtEntity(p_77663_3_, Reference.MOD_ID + ":weapons."+this.getUnlocalizedName(par1ItemStack).substring(this.getUnlocalizedName(par1ItemStack).indexOf(":")+1)+".reload", 0.3F, 1.0F);
-		}
-		if(NBTHelper.getInt(par1ItemStack, "attackTime") > NBTHelper.getInt(par1ItemStack, "attackDelay"))
-		{
-			NBTHelper.setInteger(par1ItemStack, "attackTime", (par1ItemStack.getItem() == UnrealItems.gunStinger&&NBTHelper.getBoolean(par1ItemStack, "attacking") ? 3 : 0));
-			if(!NBTHelper.getBoolean(par1ItemStack, "attacking") && !(par1ItemStack.getItem() == UnrealItems.gunStinger))
-			{
-				NBTHelper.setInteger(par1ItemStack, "attackTime", 0);
-			}
-			NBTHelper.setBoolean(par1ItemStack, "attacking", false);
-		}
+		
 	}
+	
+	public void onUsingTick(ItemStack stack, EntityPlayer player, int count)
+    {
+		if(stack.getItem() == UnrealItems.gunStinger && NBTHelper.getInt(stack, "attackTime") == 1)
+		{
+			player.worldObj.playSoundAtEntity(player, Reference.MOD_ID + ":weapons."+this.getUnlocalizedName(stack).substring(this.getUnlocalizedName(stack).indexOf(":")+1)+".startFire", 0.3F, 1.0F);
+		}
+		if(count == (stack.getItem() == UnrealItems.gunStinger ? NBTHelper.getBoolean(stack, "attacking") ? 4 : -1 : 1))
+		{
+			player.worldObj.playSoundAtEntity(player, Reference.MOD_ID + ":weapons."+this.getUnlocalizedName(stack).substring(this.getUnlocalizedName(stack).indexOf(":")+1)+".fire", 0.3F, 1.0F);
+		}
+	/*	if(NBTHelper.getBoolean(stack, "attacking") || NBTHelper.getInt(stack, "attackTime") > 0)
+		{
+			NBTHelper.setInteger(stack, "attackTime", NBTHelper.getInt(stack, "attackTime") + 1);
+		}
+	*/	if(stack.getItem() == UnrealItems.gunFlakCannon && count == 10){
+			player.worldObj.playSoundAtEntity(player, Reference.MOD_ID + ":weapons."+this.getUnlocalizedName(stack).substring(this.getUnlocalizedName(stack).indexOf(":")+1)+".reload", 0.3F, 1.0F);
+		}
+		if(count > shotDelay)
+		{
+	//		NBTHelper.setInteger(stack, "attackTime", (stack.getItem() == UnrealItems.gunStinger&&NBTHelper.getBoolean(stack, "attacking") ? 3 : 0));
+			if(!NBTHelper.getBoolean(stack, "attacking") && !(stack.getItem() == UnrealItems.gunStinger))
+			{
+	//			NBTHelper.setInteger(stack, "attackTime", 0);
+			}
+			NBTHelper.setBoolean(stack, "attacking", false);
+		}
+    }
 	
 	@Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityPlayer playerIn)
     {
-		NBTHelper.setBoolean(stack, "attacking", false);
+		//NBTHelper.setBoolean(stack, "attacking", false);
         return stack;
     }
 	
 	@Override
 	public void onPlayerStoppedUsing(ItemStack stack, World worldIn, EntityPlayer playerIn, int timeLeft)
 	{
-		NBTHelper.setBoolean(stack, "attacking", false);
+		//NBTHelper.setBoolean(stack, "attacking", false);
 	}
 	
 	@Override
@@ -104,8 +110,8 @@ public class ItemWeaponBase extends ItemUnrealRechargeable
 	{
 
 		ItemStack stack = entityItem.getEntityItem();
-		NBTHelper.setInteger(stack, "attackTime", 0);
-		NBTHelper.setBoolean(stack, "attacking", false);
+		//NBTHelper.setInteger(stack, "attackTime", 0);
+		//NBTHelper.setBoolean(stack, "attacking", false);
 		return false;
 	}
 	
@@ -131,7 +137,7 @@ public class ItemWeaponBase extends ItemUnrealRechargeable
 		else
 		{
 			//par3EntityPlayer.setItemInUse(par1ItemStack, NBTHelper.getInt(par1ItemStack, "maxAttackTime"));
-			NBTHelper.setBoolean(par1ItemStack, "attacking", true);
+			//NBTHelper.setBoolean(par1ItemStack, "attacking", true);
 		}
 		return par1ItemStack;
 	}
@@ -158,10 +164,10 @@ public class ItemWeaponBase extends ItemUnrealRechargeable
 		NBTHelper.setBoolean(par1ItemStack, "consumeMode", false);
 		NBTHelper.setInteger(par1ItemStack, "ammoAmount", ammoDefault);
 		NBTHelper.setInteger(par1ItemStack, "ammoMax", 100);
-		NBTHelper.setInteger(par1ItemStack, "attackDelay", shotDelay);
-		NBTHelper.setInteger(par1ItemStack, "attackTime", 0);
-		NBTHelper.setInteger(par1ItemStack, "maxAttackTime", 7200);
-		NBTHelper.setBoolean(par1ItemStack, "attacking", false);
+		//NBTHelper.setInteger(par1ItemStack, "attackDelay", shotDelay);
+		//NBTHelper.setInteger(par1ItemStack, "attackTime", 0);
+		//NBTHelper.setInteger(par1ItemStack, "maxAttackTime", 7200);
+		//NBTHelper.setBoolean(par1ItemStack, "attacking", false);
 	}
 	
 	private void toggleConsume(ItemStack par1ItemStack)
@@ -209,7 +215,7 @@ public class ItemWeaponBase extends ItemUnrealRechargeable
 	@Override
 	public int getMaxItemUseDuration(ItemStack par1ItemStack)
 	{
-		return NBTHelper.getInt(par1ItemStack, "maxAttackTime");
+		return 7200;//NBTHelper.getInt(par1ItemStack, "maxAttackTime");
 	}
 	
 }

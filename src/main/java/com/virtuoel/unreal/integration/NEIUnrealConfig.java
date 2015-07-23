@@ -18,24 +18,10 @@ public class NEIUnrealConfig //implements IConfigureNEI
 		API.hideItem(new ItemStack(UnrealBlocks.blockTarydiumAlloyRefined));
 		API.hideItem(new ItemStack(UnrealBlocks.oreBedrockiumHidden));
 		
-		API.hideItem(new ItemStack(UnrealBlocks.blockAsbestos));
-		API.hideItem(new ItemStack(UnrealBlocks.netherrackCompressed1x));
-		API.hideItem(new ItemStack(UnrealBlocks.netherrackCompressed2x));
-		API.hideItem(new ItemStack(UnrealBlocks.netherrackCompressed3x));
-		API.hideItem(new ItemStack(UnrealBlocks.netherrackCompressed4x));
-		API.hideItem(new ItemStack(UnrealBlocks.endStoneCompressed1x));
-		API.hideItem(new ItemStack(UnrealBlocks.endStoneCompressed2x));
-		API.hideItem(new ItemStack(UnrealBlocks.endStoneCompressed3x));
-		API.hideItem(new ItemStack(UnrealBlocks.endStoneCompressed4x));
 		API.hideItem(new ItemStack(UnrealBlocks.blockEnderCrystal));
 		API.hideItem(new ItemStack(UnrealBlocks.oreBedrockium));
 		API.hideItem(new ItemStack(UnrealBlocks.blockBedrockium));
 		API.hideItem(new ItemStack(UnrealBlocks.blockUUTC));
-		
-		API.hideItem(new ItemStack(UnrealItems.itemBlockEnderCrystal));
-		API.hideItem(new ItemStack(UnrealItems.itemBlockOreBedrockium));
-		API.hideItem(new ItemStack(UnrealItems.itemBlockBedrockium));
-		API.hideItem(new ItemStack(UnrealItems.itemBlockUUTC));
 		
 		API.hideItem(new ItemStack(UnrealItems.swordTarydiumAlloyRefined));
 		API.hideItem(new ItemStack(UnrealItems.pickaxeTarydiumAlloyRefined));
