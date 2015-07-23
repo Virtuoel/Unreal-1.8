@@ -71,6 +71,7 @@ Changelog:
 0.2.0.20
 ---
 [Addition][Config] Config options for items that cause potion effects when in the inventory
+[Removal][Recipe] Removed cheaper UUTC recipe
 
 0.2.0.19
 ---

@@ -971,27 +971,11 @@ public class UnrealRecipes
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockUUTC,1), new Object[]{
-			"STS","TBT","STS",'S',"dustDiamond",'T',"blockEnder",'B',"blockTarydium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockUUTC,1), new Object[]{
-			"STS","TBT","STS",'T',"dustDiamond",'S',"blockEnder",'B',"blockTarydium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockUUTC,1), new Object[]{
 			"STS","TBT","STS",'S',"nuggetBedrockium",'T',"blockEnderPearl",'B',"blockTarydium",
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockUUTC,1), new Object[]{
 			"STS","TBT","STS",'T',"nuggetBedrockium",'S',"blockEnderPearl",'B',"blockTarydium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockUUTC,1), new Object[]{
-			"STS","TBT","STS",'S',"dustDiamond",'T',"blockEnderPearl",'B',"blockTarydium",
-			}));
-		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealBlocks.blockUUTC,1), new Object[]{
-			"STS","TBT","STS",'T',"dustDiamond",'S',"blockEnderPearl",'B',"blockTarydium",
 			}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UnrealItems.gunRedeemer,1,((ItemWeaponBase)UnrealItems.gunRedeemer).getDamageOnCraft()), new Object[]{
