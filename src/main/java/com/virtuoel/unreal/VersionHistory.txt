@@ -1,6 +1,6 @@
 Versions:
 
-Current: 0.2.0.19
+Current: 0.2.0.20
 
 Features:(A Lot Currently NYI)
 
@@ -37,6 +37,7 @@ Syntax List
 [Bugfix]
 [Balance]
 [Change]
+[Config]
 [Removal]
 [Bug]
 [WorldGen]
@@ -66,6 +67,10 @@ Syntax List
 
 Changelog:
 ==========
+
+0.2.0.20
+---
+[Addition][Config] Config options for items that cause potion effects when in the inventory
 
 0.2.0.19
 ---

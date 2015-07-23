@@ -33,6 +33,15 @@ public class ConfigurationHandler
 	
 	private static void loadConfiguration()
 	{
+		Settings.Blocks.asbestosOrePoison = configuration.getBoolean("asbestosOrePoison", Reference.ConfigCategory.BLOCKS, false, "True for Asbestos Ore to cause a poison effect when in the inventory");
+		Settings.Blocks.asbestosBlockPoison = configuration.getBoolean("asbestosBlockPoison", Reference.ConfigCategory.BLOCKS, true, "True for Asbestos Blocks to cause a poison effect when in the inventory");
+		Settings.Items.asbestosDustPoison = configuration.getBoolean("asbestosDustPoison", Reference.ConfigCategory.ITEMS, true, "True for Asbestos Dust to cause a poison effect when in the inventory");
+		Settings.Items.asbestosTinyDustPoison = configuration.getBoolean("asbestosTinyDustPoison", Reference.ConfigCategory.ITEMS, true, "True for Tiny Asbestos Dust to cause a poison effect when in the inventory");
+		Settings.Blocks.bedrockiumOreSlowness = configuration.getBoolean("bedrockiumOreSlowness", Reference.ConfigCategory.BLOCKS, true, "True for Bedrockium Ore to cause a slowness effect when in the inventory");
+		Settings.Blocks.bedrockiumBlockSlowness = configuration.getBoolean("bedrockiumBlockSlowness", Reference.ConfigCategory.BLOCKS, true, "True for Bedrockium Blocks to cause a slowness effect when in the inventory");
+		Settings.Items.bedrockiumIngotSlowness = configuration.getBoolean("bedrockiumIngotSlowness", Reference.ConfigCategory.ITEMS, true, "True for Bedrockium Ingots to cause a slowness effect when in the inventory");
+		Settings.Items.bedrockiumNuggetSlowness = configuration.getBoolean("bedrockiumNuggetSlowness", Reference.ConfigCategory.ITEMS, true, "True for Bedrockium Nuggets to cause a slowness effect when in the inventory");
+		
 		Settings.Crafting.ninePearlsPerEnderBlock = configuration.getBoolean("ninePearlsPerEnderBlock", Reference.ConfigCategory.CRAFTING, false, "True for 9 Ender Pearls per block, false for 4");
 		
 		Settings.Crafting.nineTinyDustPerTitaniumDust = configuration.getBoolean("nineTinyDustPerTitaniumDust", Reference.ConfigCategory.CRAFTING, true, "True for 9 Tiny Pile of Titanium Dust per Titanium Dust, false for 4");
@@ -71,7 +80,7 @@ public class ConfigurationHandler
 		Settings.Debug.printDebugKeyBindingValues = configuration.getBoolean("printDebugKeyBindingValues", Reference.ConfigCategory.DEBUG, false, "True to print keybindings");
 		Settings.Debug.printDebugTextureNames = configuration.getBoolean("printDebugTextureNames", Reference.ConfigCategory.DEBUG, false, "True to print texture names");
 		Settings.Debug.debugClearItems = configuration.getBoolean("debugClearItems", Reference.ConfigCategory.DEBUG, false, "True to remove all items and blocks from this mod");
-		Settings.Debug.debugWorldGenerator = configuration.getBoolean("debugWorldGenerator", Reference.ConfigCategory.DEBUG, false, "True to have a debug overlay of ore locations in the sky");
+		Settings.Debug.debugWorldGenerator = configuration.getBoolean("debugWorldGenerator", Reference.ConfigCategory.DEBUG, false, "True to have a (permanent) debug overlay of ore locations in the sky");
 		
 		if(configuration.hasChanged())
 		{

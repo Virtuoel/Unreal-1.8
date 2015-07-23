@@ -5,12 +5,19 @@ public class Settings
 
 	public static class Blocks
 	{
+		public static boolean asbestosOrePoison;
+		public static boolean asbestosBlockPoison;
+		public static boolean bedrockiumOreSlowness;
+		public static boolean bedrockiumBlockSlowness;
 		
 	}
 	
 	public static class Items
 	{
-		
+		public static boolean asbestosDustPoison;
+		public static boolean asbestosTinyDustPoison;
+		public static boolean bedrockiumIngotSlowness;
+		public static boolean bedrockiumNuggetSlowness;
 	}
 	
 	public static class Crafting

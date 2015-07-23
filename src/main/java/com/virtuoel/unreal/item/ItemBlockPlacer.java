@@ -17,6 +17,7 @@ import net.minecraft.world.World;
 import com.virtuoel.unreal.creativetab.CreativeTabUnreal;
 import com.virtuoel.unreal.init.UnrealBlocks;
 import com.virtuoel.unreal.init.UnrealItems;
+import com.virtuoel.unreal.reference.Settings;
 
 public class ItemBlockPlacer extends ItemBlock
 {
@@ -100,7 +101,8 @@ public class ItemBlockPlacer extends ItemBlock
 		super.onUpdate(par1ItemStack, par2World, par3Entity, par4, par5);
 		if(par3Entity instanceof EntityPlayer)
 		{
-			if(par1ItemStack.getItem()==Item.getItemFromBlock(UnrealBlocks.blockAsbestos))
+			if((par1ItemStack.getItem()==Item.getItemFromBlock(UnrealBlocks.blockAsbestos) && Settings.Blocks.asbestosBlockPoison) ||
+					(par1ItemStack.getItem()==Item.getItemFromBlock(UnrealBlocks.oreAsbestos) && Settings.Blocks.asbestosOrePoison))
 			{
 				if(((EntityPlayer)par3Entity).inventory.armorItemInSlot(2)!=null&&
 						((EntityPlayer)par3Entity).inventory.armorItemInSlot(2).getItem()==
@@ -128,7 +130,8 @@ public class ItemBlockPlacer extends ItemBlock
 					}
 				}
 			}
-			else if(par1ItemStack.getItem()==Item.getItemFromBlock(UnrealBlocks.oreBedrockium) || par1ItemStack.getItem()==Item.getItemFromBlock(UnrealBlocks.blockBedrockium))
+			else if((par1ItemStack.getItem()==Item.getItemFromBlock(UnrealBlocks.oreBedrockium) && Settings.Blocks.bedrockiumOreSlowness) || 
+					(par1ItemStack.getItem()==Item.getItemFromBlock(UnrealBlocks.blockBedrockium) && Settings.Blocks.bedrockiumBlockSlowness))
 			{
 				PotionEffect potioneffect = new PotionEffect(2, 2, 3, true, false);
 				((EntityPlayer)par3Entity).addPotionEffect(potioneffect);
