@@ -13,6 +13,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.virtuoel.unreal.init.UnrealItems;
+import com.virtuoel.unreal.reference.Settings;
 
 public class ItemArmorSCUBAGear extends ItemArmorUnrealBase
 {
@@ -54,7 +55,7 @@ public class ItemArmorSCUBAGear extends ItemArmorUnrealBase
 	public void onArmorTick(World par1World, EntityPlayer par2EntityPlayer, ItemStack par3ItemStack)
 	{
 		super.onArmorTick(par1World, par2EntityPlayer, par3ItemStack);
-		if(par3ItemStack.getItem()==this&&par3ItemStack.getItemDamage()<par3ItemStack.getMaxDamage())
+		if(Settings.Items.scubaGearWaterBreathing && par3ItemStack.getItem()==this&&par3ItemStack.getItemDamage()<par3ItemStack.getMaxDamage())
 		{
 			PotionEffect potioneffect = new PotionEffect(13, 2, 0, true, false);
 			par2EntityPlayer.addPotionEffect(potioneffect);
@@ -64,7 +65,7 @@ public class ItemArmorSCUBAGear extends ItemArmorUnrealBase
 				{
 					if(itemRand.nextInt(100)==0)
 					{
-						par3ItemStack.damageItem(1, par2EntityPlayer);
+						par3ItemStack.damageItem(Settings.Items.scubaGearBreathDamage>par3ItemStack.getMaxDamage()-par3ItemStack.getItemDamage()?par3ItemStack.getMaxDamage()-par3ItemStack.getItemDamage():Settings.Items.scubaGearBreathDamage, par2EntityPlayer);
 						/*if(par2EntityPlayer.inventory.armorInventory[this.armorType].stackSize == 0)
 						{
 							par2EntityPlayer.inventory.armorInventory[this.armorType] = null;

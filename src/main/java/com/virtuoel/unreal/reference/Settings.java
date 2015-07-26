@@ -18,6 +18,21 @@ public class Settings
 		public static boolean asbestosTinyDustPoison;
 		public static boolean bedrockiumIngotSlowness;
 		public static boolean bedrockiumNuggetSlowness;
+		
+		public static boolean jumpBootsStepAssist;
+		public static boolean jumpBootsJumpBoost;
+		public static boolean shieldBeltProtection;
+		public static boolean slimeArmorRepair;
+		public static boolean toxinSuitCuresPoison;
+		public static int toxinSuitPoisonDamage;
+		public static boolean toxinSuitCuresHunger;
+		public static int toxinSuitHungerDamage;
+		public static boolean toxinSuitCuresWither;
+		public static int toxinSuitWitherDamage;
+		public static boolean scubaGearWaterBreathing;
+		public static int scubaGearBreathDamage;
+		public static boolean asbestosSuitFireProtection;
+		public static int asbestosSuitFireDamage;
 	}
 	
 	public static class Crafting

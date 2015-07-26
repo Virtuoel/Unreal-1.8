@@ -15,6 +15,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.virtuoel.unreal.init.UnrealBlocks;
 import com.virtuoel.unreal.init.UnrealItems;
+import com.virtuoel.unreal.reference.Settings;
 
 public class ItemArmorAsbestosSuit extends ItemArmorUnrealBase
 {
@@ -56,7 +57,7 @@ public class ItemArmorAsbestosSuit extends ItemArmorUnrealBase
 	public void onArmorTick(World par1World, EntityPlayer par2EntityPlayer, ItemStack par3ItemStack)
 	{
 		super.onArmorTick(par1World, par2EntityPlayer, par3ItemStack);
-		if(par3ItemStack.getItem()==this&&par3ItemStack.getItemDamage()<par3ItemStack.getMaxDamage())
+		if(Settings.Items.asbestosSuitFireProtection && par3ItemStack.getItem()==this&&par3ItemStack.getItemDamage()<par3ItemStack.getMaxDamage())
 		{
 			PotionEffect potioneffect = new PotionEffect(12, 2, 0, true, false);
 			par2EntityPlayer.addPotionEffect(potioneffect);
@@ -66,7 +67,7 @@ public class ItemArmorAsbestosSuit extends ItemArmorUnrealBase
 				{
 					if(itemRand.nextInt(100)==0)
 					{
-						par3ItemStack.damageItem(1, par2EntityPlayer);
+						par3ItemStack.damageItem(Settings.Items.asbestosSuitFireDamage>par3ItemStack.getMaxDamage()-par3ItemStack.getItemDamage()?par3ItemStack.getMaxDamage()-par3ItemStack.getItemDamage():Settings.Items.asbestosSuitFireDamage, par2EntityPlayer);
 						//par3ItemStack.setItemDamage(par3ItemStack.getItemDamage()+1);
 					}
 				}

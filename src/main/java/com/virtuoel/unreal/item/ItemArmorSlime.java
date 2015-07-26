@@ -1,5 +1,7 @@
 package com.virtuoel.unreal.item;
 
+import com.virtuoel.unreal.reference.Settings;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -29,7 +31,7 @@ public class ItemArmorSlime extends ItemArmorUnrealBase
 	public void onArmorTick(World par1World, EntityPlayer par2EntityPlayer, ItemStack par3ItemStack)
 	{
 		super.onArmorTick(par1World, par2EntityPlayer, par3ItemStack);
-		if(par3ItemStack.getItem()==this && par3ItemStack.getItemDamage()>0)
+		if(Settings.Items.slimeArmorRepair && par3ItemStack.getItem()==this && par3ItemStack.getItemDamage()>0)
 		{
 			if(par2EntityPlayer.isInsideOfMaterial(Material.water)||par2EntityPlayer.isWet())
 			{

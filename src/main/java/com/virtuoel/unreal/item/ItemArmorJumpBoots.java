@@ -15,6 +15,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.virtuoel.unreal.init.UnrealItems;
 import com.virtuoel.unreal.reference.Reference;
+import com.virtuoel.unreal.reference.Settings;
 
 public class ItemArmorJumpBoots extends ItemArmorUnrealBase
 {
@@ -55,7 +56,7 @@ public class ItemArmorJumpBoots extends ItemArmorUnrealBase
 	public void onArmorTick(World par1World, EntityPlayer par2EntityPlayer, ItemStack par3ItemStack)
 	{
 		super.onArmorTick(par1World, par2EntityPlayer, par3ItemStack);
-		if(!par2EntityPlayer.isSneaking())
+		if(Settings.Items.jumpBootsJumpBoost && !par2EntityPlayer.isSneaking())
 		{
 			if(par3ItemStack.getItem()==this)
 			{

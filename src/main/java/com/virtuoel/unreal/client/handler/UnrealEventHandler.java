@@ -44,7 +44,10 @@ public class UnrealEventHandler
 	@SubscribeEvent
 	public void onLiving(LivingUpdateEvent event)
 	{
-		handleStepAssist(event.entityLiving);
+		if(Settings.Items.jumpBootsStepAssist)
+		{	
+			handleStepAssist(event.entityLiving);
+		}
 	}
 	
 	@SubscribeEvent

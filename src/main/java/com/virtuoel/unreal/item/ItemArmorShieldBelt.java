@@ -14,6 +14,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.virtuoel.unreal.init.UnrealBlocks;
+import com.virtuoel.unreal.init.UnrealItems;
+import com.virtuoel.unreal.reference.Settings;
 
 public class ItemArmorShieldBelt extends ItemArmorUnrealBase
 {
@@ -54,14 +56,14 @@ public class ItemArmorShieldBelt extends ItemArmorUnrealBase
 	@Override
 	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
 	{
-		return Item.getItemFromBlock(UnrealBlocks.blockTitanium) == par2ItemStack.getItem() ? true : false;
+		return UnrealItems.tarydPowerBasic == par2ItemStack.getItem() ? true : false;
 	}
 
 	@Override
 	public void onArmorTick(World par1World, EntityPlayer par2EntityPlayer, ItemStack par3ItemStack)
 	{
 		super.onArmorTick(par1World, par2EntityPlayer, par3ItemStack);
-		if(par3ItemStack.getItem()==this)
+		if(Settings.Items.shieldBeltProtection && par3ItemStack.getItem()==this)
 		{
 			PotionEffect potioneffect = new PotionEffect(22, 2, 4, true, false);
 			par2EntityPlayer.addPotionEffect(potioneffect);

@@ -587,7 +587,7 @@ public class UnrealRecipes
 			}));
 		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Blocks.dragon_egg,2), new Object[]{
-			"virtuoel.unreal.debug","virtuoel.unreal.debug",UnrealBlocks.blockEnderCrystal,Blocks.dragon_egg,UnrealBlocks.blockEnderCrystal,"blockBedrockium","virtuoel.unreal.debug",UnrealBlocks.blockEnderCrystal,UnrealBlocks.blockEnderCrystal,
+			UnrealBlocks.blockEnderCrystal,UnrealBlocks.blockEnderCrystal,"virtuoel.unreal.debug",Blocks.dragon_egg,"blockBedrockium","blockBedrockium",UnrealBlocks.blockEnderCrystal,"virtuoel.unreal.debug","blockBedrockium",
 			}));
 		
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UnrealItems.dustCinnabarTiny,1), new Object[]{

@@ -42,6 +42,21 @@ public class ConfigurationHandler
 		Settings.Items.bedrockiumIngotSlowness = configuration.getBoolean("bedrockiumIngotSlowness", Reference.ConfigCategory.ITEMS, true, "True for Bedrockium Ingots to cause a slowness effect when in the inventory");
 		Settings.Items.bedrockiumNuggetSlowness = configuration.getBoolean("bedrockiumNuggetSlowness", Reference.ConfigCategory.ITEMS, true, "True for Bedrockium Nuggets to cause a slowness effect when in the inventory");
 		
+		Settings.Items.jumpBootsStepAssist = configuration.getBoolean("jumpBootsStepAssist", Reference.ConfigCategory.ITEMS, false, "True for Jump Boots to allow the player to walk up 1 block high inclines while worn (May break other forms of step assist. Use at own risk.)");
+		Settings.Items.jumpBootsJumpBoost = configuration.getBoolean("jumpBootsJumpBoost", Reference.ConfigCategory.ITEMS, true, "True for Jump Boots to give the player Jump Boost while worn");
+		Settings.Items.shieldBeltProtection = configuration.getBoolean("shieldBeltProtection", Reference.ConfigCategory.ITEMS, true, "True for Shield Belt to give the player Absorption while worn");
+		Settings.Items.scubaGearWaterBreathing = configuration.getBoolean("scubaGearWaterBreathing", Reference.ConfigCategory.ITEMS, true, "True for SCUBA Gear to give the player Water Breathing while worn and in water");
+		Settings.Items.scubaGearBreathDamage = configuration.getInt("scubaGearBreathDamage", Reference.ConfigCategory.ITEMS, 1, 0, 1000, "Amount to damage the SCUBA Gear when it protects the player from losing air (Damage greater than the armor's durability will have no other effects)");
+		Settings.Items.asbestosSuitFireProtection = configuration.getBoolean("asbestosSuitFireProtection", Reference.ConfigCategory.ITEMS, true, "True for Asbestos Suit to give the player Fire Resistance while worn");
+		Settings.Items.asbestosSuitFireDamage = configuration.getInt("asbestosSuitFireDamage", Reference.ConfigCategory.ITEMS, 1, 0, 1000, "Amount to damage the Asbestos Suit when it protects the player from fire damage (Damage greater than the armor's durability will have no other effects)");
+		Settings.Items.slimeArmorRepair = configuration.getBoolean("slimeArmorRepair", Reference.ConfigCategory.ITEMS, true, "True for Slime Armor to slowly repair over time (Repairs faster when in water)");
+		Settings.Items.toxinSuitCuresPoison = configuration.getBoolean("toxinSuitCuresPoison", Reference.ConfigCategory.ITEMS, true, "True for the Toxin Suit to remove the Poison effect from the player while worn");
+		Settings.Items.toxinSuitPoisonDamage = configuration.getInt("toxinSuitPoisonDamage", Reference.ConfigCategory.ITEMS, 1, 0, 1000, "Amount to damage the Toxin Suit when this effect is removed (Damage greater than the armor's durability will have no other effects)");
+		Settings.Items.toxinSuitCuresHunger = configuration.getBoolean("toxinSuitCuresHunger", Reference.ConfigCategory.ITEMS, true, "True for the Toxin Suit to remove the Hunger effect from the player while worn");
+		Settings.Items.toxinSuitHungerDamage = configuration.getInt("toxinSuitHungerDamage", Reference.ConfigCategory.ITEMS, 2, 0, 1000, "Amount to damage the Toxin Suit when this effect is removed (Damage greater than the armor's durability will have no other effects)");
+		Settings.Items.toxinSuitCuresWither = configuration.getBoolean("toxinSuitCuresWither", Reference.ConfigCategory.ITEMS, true, "True for the Toxin Suit to remove the Wither effect from the player while worn");
+		Settings.Items.toxinSuitWitherDamage = configuration.getInt("toxinSuitWitherDamage", Reference.ConfigCategory.ITEMS, 5, 0, 1000, "Amount to damage the Toxin Suit when this effect is removed (Damage greater than the armor's durability will have no other effects)");
+		
 		Settings.Crafting.ninePearlsPerEnderBlock = configuration.getBoolean("ninePearlsPerEnderBlock", Reference.ConfigCategory.CRAFTING, false, "True for 9 Ender Pearls per block, false for 4");
 		
 		Settings.Crafting.nineTinyDustPerTitaniumDust = configuration.getBoolean("nineTinyDustPerTitaniumDust", Reference.ConfigCategory.CRAFTING, true, "True for 9 Tiny Pile of Titanium Dust per Titanium Dust, false for 4");

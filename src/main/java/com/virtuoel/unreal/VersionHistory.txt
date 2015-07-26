@@ -72,6 +72,8 @@ Changelog:
 ---
 [Addition][Config] Config options for items that cause potion effects when in the inventory
 [Removal][Recipe] Removed cheaper UUTC recipe
+[Addition][Config] Config options for armors that apply potion effects while worn
+[Change][Recipe] Tweaked Dragon Egg doubling recipe
 
 0.2.0.19
 ---

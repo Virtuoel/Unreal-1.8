@@ -11,6 +11,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.virtuoel.unreal.init.UnrealItems;
+import com.virtuoel.unreal.reference.Settings;
 
 public class ItemArmorToxinSuit extends ItemArmorUnrealBase
 {
@@ -54,25 +55,25 @@ public class ItemArmorToxinSuit extends ItemArmorUnrealBase
 		super.onArmorTick(par1World, par2EntityPlayer, par3ItemStack);
 		if(par3ItemStack.getItem()==this&&par3ItemStack.getItemDamage()<par3ItemStack.getMaxDamage())
 		{
-			if(par2EntityPlayer.getActivePotionEffect(Potion.poison)!=null)
+			if(Settings.Items.toxinSuitCuresPoison && par2EntityPlayer.getActivePotionEffect(Potion.poison)!=null)
 			{
 				par2EntityPlayer.removePotionEffect(19);
 				//if(itemRand.nextInt(10)==0)
 				//{
-					par3ItemStack.damageItem(1, par2EntityPlayer);
+					par3ItemStack.damageItem(Settings.Items.toxinSuitPoisonDamage>par3ItemStack.getMaxDamage()-par3ItemStack.getItemDamage()?par3ItemStack.getMaxDamage()-par3ItemStack.getItemDamage():Settings.Items.toxinSuitPoisonDamage, par2EntityPlayer);
 					//par3ItemStack.setItemDamage(par3ItemStack.getItemDamage()+1);
 				//}
 			}
-			if(par2EntityPlayer.getActivePotionEffect(Potion.wither)!=null)
+			if(Settings.Items.toxinSuitCuresWither && par2EntityPlayer.getActivePotionEffect(Potion.wither)!=null)
 			{
 				par2EntityPlayer.removePotionEffect(20);
-				par3ItemStack.damageItem(5, par2EntityPlayer);
+				par3ItemStack.damageItem(Settings.Items.toxinSuitWitherDamage>par3ItemStack.getMaxDamage()-par3ItemStack.getItemDamage()?par3ItemStack.getMaxDamage()-par3ItemStack.getItemDamage():Settings.Items.toxinSuitWitherDamage, par2EntityPlayer);
 				//par3ItemStack.setItemDamage(par3ItemStack.getItemDamage()+5);
 			}
-			if(par2EntityPlayer.getActivePotionEffect(Potion.hunger)!=null)
+			if(Settings.Items.toxinSuitCuresHunger && par2EntityPlayer.getActivePotionEffect(Potion.hunger)!=null)
 			{
 				par2EntityPlayer.removePotionEffect(17);
-				par3ItemStack.damageItem(2, par2EntityPlayer);
+				par3ItemStack.damageItem(Settings.Items.toxinSuitHungerDamage>par3ItemStack.getMaxDamage()-par3ItemStack.getItemDamage()?par3ItemStack.getMaxDamage()-par3ItemStack.getItemDamage():Settings.Items.toxinSuitHungerDamage, par2EntityPlayer);
 				//par3ItemStack.setItemDamage(par3ItemStack.getItemDamage()+5);
 			}
 		}
